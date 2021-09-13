@@ -6,23 +6,40 @@ $open-sans:            'Open Sans';
 $open-sans-sans-serif: 'Open Sans', sans-serif;
 $merriweather-serif:   'Merriweather', serif;
 $monospace:             Menlo, Consolas, monospace;
+$nanum-sans-kr:        'NanumSquareRound', "Helvetica Neue", sans-serif; // 기본 폰트 
+$nanum-coding:         'Source Code Pro', "NanumSquareRound", Consolas; // 코드 폰트
+// $font-family-base: $open-sans-sans-serif;
+$font-family-base: $nanum-sans-kr; // 기본폰트 바꾸기
 
-$font-family-base: $open-sans-sans-serif;
-
+// $font-families: (
+//    // base
+//    'headings':          $open-sans-sans-serif,
+//    // components
+//    'code':              $monospace,
+//    'caption':           $merriweather-serif,
+//    'image-gallery':     $open-sans,
+//    'post-header-cover': $merriweather-serif,
+//    'post-meta':         $open-sans-sans-serif,
+//    'post-content':      $merriweather-serif,
+//    'post-excerpt-link': $open-sans-sans-serif,
+//    'highlight':         $monospace,
+//    // layout
+//    'sidebar':           $open-sans-sans-serif
+// );
 $font-families: (
-   // base
-   'headings':          $open-sans-sans-serif,
-   // components
-   'code':              $monospace,
-   'caption':           $merriweather-serif,
-   'image-gallery':     $open-sans,
-   'post-header-cover': $merriweather-serif,
-   'post-meta':         $open-sans-sans-serif,
-   'post-content':      $merriweather-serif,
-   'post-excerpt-link': $open-sans-sans-serif,
-   'highlight':         $monospace,
-   // layout
-   'sidebar':           $open-sans-sans-serif
+  // base
+    'headings': $nanum-sans-kr,
+  // components
+    'code': $nanum-coding,
+    'caption': $nanum-sans-kr,
+    'image-gallery': $nanum-sans-kr,
+    'post-header-cover': $nanum-sans-kr,
+    'post-meta': $nanum-sans-kr,
+    'post-content': $nanum-sans-kr,
+    'post-excerpt-link': $nanum-sans-kr,
+    'highlight': $nanum-coding,
+  // layout
+    'sidebar': $nanum-sans-kr,
 );
 
 // equal to 15px
