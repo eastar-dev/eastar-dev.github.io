@@ -118,7 +118,7 @@ navbar:
 # Page footer configurations
 footer:
     # Links to be shown on the right of the footer section
-    # links:
+    links:
     #     Creative Commons:
     #         icon: fab fa-creative-commons
     #         url: 'https://creativecommons.org/'
@@ -229,7 +229,7 @@ widgets:
         # Author title
         author_title: Android Developer
         # Author's current location
-        location: Your location
+        #location: Your location
         # URL or path to the avatar image
         avatar: https://avatars.githubusercontent.com/u/438869?v=4
         # Whether show the rounded avatar image
