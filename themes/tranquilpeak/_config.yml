@@ -81,10 +81,10 @@ sidebar:
         #     title: global.linkedin
         #     url: https://www.linkedin.com/profile/
         #     icon: fab fa-linkedin
-        mail:
-            title: global.mail
-            url: mailto
-            icon: fa fa-envelope
+        # mail:
+        #     title: global.mail
+        #     url: mailto
+        #     icon: fa fa-envelope
     rss:
         rss:
             title: global.rss

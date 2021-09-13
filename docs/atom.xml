@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Eastar Android</title>
+  
+  <subtitle>Eastar android develop log</subtitle>
+  <link href="https://eastar-dev.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://eastar-dev.github.io/"/>
+  <updated>2021-09-13T16:15:23.317Z</updated>
+  <id>https://eastar-dev.github.io/</id>
+  
+  <author>
+    <name>Eastar Jeong</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://eastar-dev.github.io/2021/09/14/test/"/>
+    <id>https://eastar-dev.github.io/2021/09/14/test/</id>
+    <published>2021-09-13T16:07:33.000Z</published>
+    <updated>2021-09-13T16:15:23.317Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Blog-사용설명서"><a href="#Blog-사용설명서" class="headerlink" title="Blog 사용설명서"></a>Blog 사용설명서</h1><p>블로그에 무슨 사용설명서가 필요할까 싶지만</p><p>개발 블로그라는 목적이 있어 명확한 표현방식에 규칙을 이용해서 만들려고 한다.</p><p>이에 Blog 사용 설명서를 만들어 보는 이들에 도움을 주고자 한다.</p><p>개발서적을 보면 책에 사용되는 표현 방법들을 이야기 한것과 비슷하다고 생각하면 될것 같다.</p><h3 id="주의사항"><a href="#주의사항" class="headerlink" title="주의사항"></a>주의사항</h3><p>❗주의사항 입니다.</p><h3 id="인용"><a href="#인용" class="headerlink" title="인용"></a>인용</h3><blockquote><p>실행의 결과물 output 등을 인용을 통해 표시한다</p></blockquote><h3 id="코드"><a href="#코드" class="headerlink" title="코드"></a>코드</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">직접적으로 입력 해야 하는 명령들을 여기에 표기 합니다.</span><br></pre></td></tr></table></figure><p>코드에 윗부분은 내용이 들어가야 하는 파일, 콘솔, 등이 표현되고 코드 내부는 직접적으로 붙여 넣기에 적합한 내용만 들어간다. </p><p>이것은 사용자가 복사 버튼을 눌러서 바로 사용하기 편하게 하기 위해서 이런식으로 구성한다.</p><p>예를 들자면 다음과 같은 표현이 나올것 같다.</p><p>예시</p><p>D:\blog&gt;에서 입력</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dir</span><br></pre></td></tr></table></figure><blockquote><p>D 드라이브의 볼륨에는 이름이 없습니다.<br>볼륨 일련 번호: A00E-09BF<br>D:\blog 디렉터리<br>2021-09-12  오전 04:10    <DIR>          .<br>2021-09-12  오전 04:10    <DIR>          ..<br>…<br>2021-09-12  오전 03:51             2,653 _config.yml<br>6개 파일             195,658 바이트<br>9개 디렉터리  81,542,119,424 바이트 남음</p></blockquote><h3 id="목차"><a href="#목차" class="headerlink" title="목차"></a>목차</h3><p>모든 목차는 <code>제목1</code> 이라는 표현형식으로 표현됩니다.</p><h1 id="이것이-목차-1-입니다"><a href="#이것이-목차-1-입니다" class="headerlink" title="이것이 목차 1 입니다."></a>이것이 목차 1 입니다.</h1><p>블로그에서는 제목 다음으로 가장 큰글씨 입니다.</p><p>목차는 다음과 같은 구성을 같습니다.</p><ol><li>개요 및 이론적은 내용 이것을 고민하게된 이유</li><li>Step By Step : 따라하기</li><li>TL;DR : 실질적인 코드부분, 빠른 사용을 위한 핵심내용</li><li>Troubleshooting : 하면서 삽질 했던것 에러나는것들을 정리</li></ol><h3 id="참고링크"><a href="#참고링크" class="headerlink" title="참고링크"></a>참고링크</h3><p>목차 다음에는 참고 링크를 첨부해서 직접적인 정보를 얻은 부분을 표시해서 원문이나 더 많은 정보를 확인 할수 있도록 합니다.</p><h3 id="이미지-삽입"><a href="#이미지-삽입" class="headerlink" title="이미지 삽입"></a>이미지 삽입</h3><p><img src="Blog%20%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%89%E1%85%A5%E1%86%AF%E1%84%86%E1%85%A7%E1%86%BC%E1%84%89%E1%85%A5%202da9fab5d29840edab4f59842e87c680/Untitled.png" alt="Untitled"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Blog-사용설명서&quot;&gt;&lt;a href=&quot;#Blog-사용설명서&quot; class=&quot;headerlink&quot; title=&quot;Blog 사용설명서&quot;&gt;&lt;/a&gt;Blog 사용설명서&lt;/h1&gt;&lt;p&gt;블로그에 무슨 사용설명서가 필요할까 싶지만&lt;/p&gt;
+&lt;p&gt;개발 블로그라</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://eastar-dev.github.io/2021/09/13/hello-world/"/>
+    <id>https://eastar-dev.github.io/2021/09/13/hello-world/</id>
+    <published>2021-09-13T13:27:48.360Z</published>
+    <updated>2021-09-13T13:27:48.360Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
