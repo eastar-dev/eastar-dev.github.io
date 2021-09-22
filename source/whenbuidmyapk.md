@@ -1,0 +1,107 @@
+---
+title: when build my apk
+---
+# 빌드시간을 화면에 표시하기
+
+Create: 2021년 6월 6일 오후 9:55
+Tag: android, tip
+
+## "나는 네가 빌드된 시간을 알고 싶다."
+
+![https://media.giphy.com/media/yUZXFSW5rsgBq/giphy.gif](https://media.giphy.com/media/yUZXFSW5rsgBq/giphy.gif)
+
+라는 단순한 욕망(?)으로 시작한 일이다.
+
+하지만 생각보다 효과가 좋았고 이것을 이용해서 언제 설치 한지도 모르는 앱을 디버깅 하는 일은 없어졌다. 
+
+BuildConfig에 빌드시 변수 삽입(Groovy, KTS)을 해서 화면에 이것을 보여준다.
+
+빌드 시간을 변수로 넣고 싶을 때 라는 생각으로 시작한 작업 
+
+## BuildConfig
+
+build.gradle 의 defaultConfig
+
+모든 Build variants에 적용됨
+
+```groovy
+defaultConfig {
+    applicationId "your project"
+    minSdkVersion 26
+    targetSdkVersion 29
+    versionCode 1
+    versionName "1.0"
+
+    buildConfigField "String", "SOME_KEY", '"gDE4g5DFghsf5523HDSFdfg"'
+    buildConfigField("String", "SOME_KEY", '"thisIsSomeKeyString"')
+    buildConfigField("String", "SOME_KEY", '"안녕하세요.\\nhello bryan 입니다."')
+		buildConfigField("boolean", "IS_TEST", "true") // boolean
+		buildConfigField("int", "MAX_AGE", "50") // int
+}
+```
+
+특정 빌드에 적용할때
+
+```groovy
+buildTypes {
+    debug {
+        minifyEnabled true
+        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-debug.pro'
+        buildConfigField "String", "SOME_KEY", '"debug용 키 스트링"'
+    }
+    release {
+        minifyEnabled false
+        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        buildConfigField "String", "SOME_KEY", '"release용 키 스트링"'
+    }
+}
+```
+
+## 사용방법
+
+```java
+String key = BuildConfig.SOME_KEY;
+```
+
+***BuildConfig 는 모듈마다 작성된다. import 를 확인해서 원치 않는 것을 가져왔는지 확인하자***
+
+## TL;DR
+
+build.gradle.kts
+
+```groovy
+import java.text.SimpleDateFormat
+import java.util.*
+
+android {
+    buildTypes {
+        getByName("debug") {
+            buildConfigField("String", "BUILD_TIME", """"${SimpleDateFormat("MM.dd HH:mm").format(Date())}"""")
+        }
+    }
+}
+```
+
+debug 에서만 적용
+
+build.gradle
+
+```groovy
+android {
+    buildTypes {
+        debug {
+            buildConfigField('String', 'BUILD_TIME', "\"${new Date().toLocalDateTime()}\"")
+        }
+    }
+}
+```
+
+모든빌드에적용
+
+```groovy
+android {
+    defaultConfig {
+        buildConfigField('String', 'BUILD_TIME', "\"${new Date().toLocalDateTime()}\"")
+    }
+}
+```
