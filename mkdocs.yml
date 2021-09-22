@@ -2,6 +2,7 @@ site_name: Eastar's android develop
 repo_url: https://github.com/eastar-dev
 repo_name: eastar-dev
 docs_dir: source
+site_dir: docs
 
 extra:
   analytics:
