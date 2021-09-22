@@ -5,4 +5,5 @@ theme:
     text: Roboto
     code: Roboto Mono
   # language: kr
-  logo: assets/logo.png
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
