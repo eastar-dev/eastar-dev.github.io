@@ -1,5 +1,6 @@
 site_name: Eastar's android develop
 repo_url: https://github.com/eastar-dev
+site_url: https://eastar-dev.github.io/
 repo_name: eastar-dev
 docs_dir: source
 site_dir: docs
