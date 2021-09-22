@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: Eastar's android develop
 theme:
   name: material
   font:
@@ -7,3 +7,40 @@ theme:
   # language: kr
   logo: assets/logo.svg
   favicon: assets/logo.svg
+  features:
+    # - navigation.tabs
+    - header.autohide
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: grey
+      accent: grey
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+extra:
+  analytics:
+    provider: google
+    property: G-PM107R0BGH
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/eastar-dev
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/eastarj/
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/eastar.jeong
+extra:
+  disqus: eastar-dev
+
+
+repo_url: https://github.com/eastar-dev
+repo_name: eastar-dev
+
