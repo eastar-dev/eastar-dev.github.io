@@ -44,3 +44,7 @@ extra:
 repo_url: https://github.com/eastar-dev
 repo_name: eastar-dev
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
