@@ -1,0 +1,57 @@
+site_name: Eastar's android develop
+repo_url: https://github.com/eastar-dev
+repo_name: eastar-dev
+docs_dir: source
+site_dir: docs
+
+extra:
+  analytics:
+    provider: google
+    property: G-PM107R0BGH
+  disqus: eastar-dev
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/eastar-dev
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/eastarj/
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/eastar.jeong
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.keys
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - footnotes
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      clickable_checkbox: true
+      custom_checkbox: true
+  - meta
+
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  features:
+    - header.autohide
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: grey
+      accent: grey
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
