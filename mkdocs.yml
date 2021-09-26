@@ -1,5 +1,8 @@
 site_name: Eastar's android develop
-repo_url: https://github.com/eastar-dev
+site_author: Eastar Jeong
+site_description: A blog created to help others with what I have organized while developing Android.
+repo_url: https://github.com/eastar-dev/eastar-dev.github.io
+edit_uri: edit/master/source/
 site_url: https://eastar-dev.github.io/
 repo_name: eastar-dev
 docs_dir: source
@@ -31,6 +34,8 @@ markdown_extensions:
       clickable_checkbox: true
       custom_checkbox: true
   - meta
+  - toc:
+      permalink: true
 
 theme:
   name: material
