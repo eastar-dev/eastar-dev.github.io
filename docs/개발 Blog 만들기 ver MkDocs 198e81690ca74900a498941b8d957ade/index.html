@@ -393,6 +393,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    제목
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#note" class="md-nav__link">
     Note
   </a>
@@ -402,6 +409,13 @@
           <li class="md-nav__item">
   <a href="#code" class="md-nav__link">
     Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    이미지 링크
   </a>
   
 </li>
@@ -543,6 +557,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    제목
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#note" class="md-nav__link">
     Note
   </a>
@@ -552,6 +573,13 @@
           <li class="md-nav__item">
   <a href="#code" class="md-nav__link">
     Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    이미지 링크
   </a>
   
 </li>
@@ -612,6 +640,9 @@ git commit -m <span class="s2">&quot;posting&quot;</span>
 git push origin master
 </code></pre></div>
 <h2 id="_5">글 작성방법<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="_6">제목<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>제목에 괄호가 들어가는 문서를 만들지 말자</p>
+<p>문서의 제목은 이미지 폴더의 이름으로 사용되는데 이미지 링크 연결시 마크다운 문법과 링크를 걸때 사용하는 괄호가 충돌 해서 수정이 불가피해진다.</p>
 <h3 id="note">Note<a class="headerlink" href="#note" title="Permanent link">&para;</a></h3>
 <ol>
 <li>시작을 !!!로 시작하다.</li>
@@ -658,10 +689,6 @@ git push origin master
 </code></pre></div></p>
 <p><img alt="Untitled" src="Untitled%202.png" /></p>
 <ol>
-<li>제목에 괄호가 들어가는 문서를 만들지 말자<ol>
-<li>문서의 제목은 이미지 폴더의 이름으로 사용되는데 이미지 링크 연결시 마크다운 문법과 링크를 걸때 사용하는 괄호가 충돌 해서 수정이 불가피해진다.</li>
-</ol>
-</li>
 <li>현 상태에서 가장 비슷한 문법은 아래와 같다.</li>
 </ol>
 <p>아래와 같이 작업후 <code>시작 부분과</code>끝부분을 탭으로 밀어서 수정하는 것이다  </p>
@@ -727,8 +754,33 @@ git push origin master
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>적당한것을 선택할수 밖에 없다</p>
+<p>적당한것을 선택할수 밖에 없다 </p>
 </div>
+<h3 id="_7">이미지 링크<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>notion 에서 설정 → 내보내기 → markdown을 사용해서 내보내면 zip 형태로 압축된 상태이고
+해당 이미지 링크는 다음과 같은 규칙으로 만들어진다.</p>
+<p><img alt="Untitled" src="Untitled%206.png" /></p>
+<div class="highlight"><pre><span></span><code>{문서이름}.mk
+{문서이름}+
+         +---  Untitled.png
+         +---  Untitled 1.png
+         +---  Untitled 2.png
+         +---  ...
+         +---  Untitled N.png
+</code></pre></div>
+<p>그리고 이 파일을  build 하게 되면 아래 형태로 나온다</p>
+<div class="highlight"><pre><span></span><code>{문서이름}+
+         +---  index.html
+         +---  Untitled.png
+         +---  Untitled 1.png
+         +---  Untitled 2.png
+         +---  ...
+         +---  Untitled N.png
+</code></pre></div>
+<p>따라서 이미지의 경로를 변경해줄 필요가 있는데 아래 정규식을 통해서 변경하자</p>
+<div class="highlight"><pre><span></span><code>찾기 : !\[Untitled\]\(.*\/(Untitled(?:|%20\d+))\.png\)
+바꾸기 : ![Untitled]($1.png)
+</code></pre></div>
                 
               
               
