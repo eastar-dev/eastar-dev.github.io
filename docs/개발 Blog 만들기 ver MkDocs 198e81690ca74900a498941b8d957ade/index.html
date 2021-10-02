@@ -394,13 +394,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    빌드 및 배포
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     글 작성방법
   </a>
   
@@ -408,7 +415,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     제목
   </a>
   
@@ -429,7 +436,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
+    선택형 코드
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
     이미지 링크
   </a>
   
@@ -558,13 +572,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    빌드 및 배포
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     글 작성방법
   </a>
   
@@ -572,7 +593,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     제목
   </a>
   
@@ -593,7 +614,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
+    선택형 코드
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
     이미지 링크
   </a>
   
@@ -654,8 +682,14 @@
 git commit -m <span class="s2">&quot;posting&quot;</span>
 git push origin master
 </code></pre></div>
-<h2 id="_5">글 작성방법<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<h3 id="_6">제목<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_5">빌드 및 배포<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>mkdocs build
+git add .
+git commit -m <span class="s2">&quot;posting&quot;</span>
+git push origin master
+</code></pre></div>
+<h2 id="_6">글 작성방법<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="_7">제목<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>제목에 괄호가 들어가는 문서를 만들지 말자</p>
 <p>문서의 제목은 이미지 폴더의 이름으로 사용되는데 이미지 링크 연결시 마크다운 문법과 링크를 걸때 사용하는 괄호가 충돌 해서 수정이 불가피해진다.</p>
 <h3 id="note">Note<a class="headerlink" href="#note" title="Permanent link">&para;</a></h3>
@@ -664,55 +698,69 @@ git push origin master
 <li>줄바꿈은 shift + enter</li>
 <li>줄 끝에 띄여쓰기 4칸 추가</li>
 <li>
-<p><a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions#supported-types">추가기능 확인 클릭</a>
+<p><a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions#supported-types">Note 에서 사용할수 있는 추가 ICON 확인(클릭)</a>
     <div class="highlight"><pre><span></span><code><span class="o">!!!</span> <span class="n">note</span>
     <span class="err">이</span> <span class="err">페이지을</span> <span class="err">보지</span> <span class="err">못했다면</span> <span class="err">이생각을</span> <span class="err">하지</span> <span class="err">않았을것이다</span><span class="p">.</span>  
     <span class="n">https</span><span class="p">:</span><span class="c1">//squidfunk.github.io/mkdocs-material/reference/abbreviations/</span>
 </code></pre></div></p>
-<p><img alt="Untitled" src="Untitled.png" /></p>
+<p>결과물</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>이 페이지을 보지 못했다면 이생각을 하지 않았을것이다.<br />
+https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
+</div>
 </li>
 </ol>
 <h3 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h3>
-<p>코드는 기본적으로 <code>kotlin ~~~</code> 과 같은 형태로 나타는다.</p>
-<p><div class="highlight"><pre><span></span><code><span class="err">```</span><span class="n">kotlin</span>
-<span class="n">fun</span> <span class="nf">main</span><span class="o">()</span> <span class="o">{</span>
-    <span class="n">println</span><span class="o">(</span><span class="s2">&quot;hello world&quot;</span><span class="o">)</span>
+<p>코드는 기본적으로 ```kotlin ~~~ ``` 과 같은 형태로 나타는다.</p>
+<div class="highlight"><pre><span></span><code> <span class="err">```</span><span class="n">kotlin</span>
+ <span class="n">fun</span> <span class="n">main</span><span class="o">()</span> <span class="o">{</span>
+     <span class="n">println</span><span class="o">(</span><span class="s2">&quot;hello world&quot;</span><span class="o">)</span>
+ <span class="o">}</span>
+ <span class="err">```</span>
+</code></pre></div>
+<p><img alt="Untitled" src="Untitled%201.png" /></p>
+<h3 id="_8">선택형 코드<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>이 형태를 완벽하게 지원하는 notion의 문법은 없다</p>
+</div>
+<p>아래와 같은 markdown 파일을 출력을 하면된다.</p>
+<p><div class="highlight"><pre><span></span><code><span class="o">===</span> <span class="s2">&quot;gradle&quot;</span>
+
+    <span class="err">```</span><span class="n">groovy</span>
+    <span class="n">dependencies</span> <span class="o">{</span>
+        <span class="n">coreLibraryDesugaring</span> <span class="s1">&#39;com.android.tools:desugar_jdk_libs:1.1.5&#39;</span>
+    <span class="o">}</span>
+    <span class="err">```</span>
+
+<span class="o">===</span> <span class="s2">&quot;kotlin&quot;</span>
+
+    <span class="err">```</span><span class="n">kotlin</span>
+    <span class="n">dependencies</span> <span class="o">{</span>
+        <span class="n">coreLibraryDesugaring</span><span class="o">(</span><span class="s2">&quot;com.android.tools:desugar_jdk_libs:1.1.5&quot;</span><span class="o">)</span>
+    <span class="o">}</span>
+    <span class="err">```</span>
+</code></pre></div>
+결과물</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">gradle</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">coreLibraryDesugaring</span> <span class="s1">&#39;com.android.tools:desugar_jdk_libs:1.1.5&#39;</span>
 <span class="o">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>![Untitled](Untitled%201.png)
-
-### 선택형 코드
-
-!!! note
-    이 형태를 완벽하게 지원하는 notion의 문법은 없다
-
-아래와 같은 markdown 파일을 출력을 하면된다.
-
-```groovy
-=== &quot;gradle&quot;
-
-    ```groovy
-    dependencies {
-        coreLibraryDesugaring &#39;com.android.tools:desugar_jdk_libs:1.1.5&#39;
-    }
-    ```
-
-=== &quot;kotlin&quot;
-
-    ```kotlin
-    dependencies {
-        coreLibraryDesugaring(&quot;com.android.tools:desugar_jdk_libs:1.1.5&quot;)
-    }
-    ```
-</code></pre></div></p>
-<p><img alt="Untitled" src="Untitled%202.png" /></p>
-<ol>
-<li>현 상태에서 가장 비슷한 문법은 아래와 같다.</li>
-</ol>
-<p>아래와 같이 작업후 <code>시작 부분과</code>끝부분을 탭으로 밀어서 수정하는 것이다  </p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">kotlin</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="p">{</span>
+    <span class="n">coreLibraryDesugaring</span><span class="p">(</span><span class="s">&quot;com.android.tools:desugar_jdk_libs:1.1.5&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<p>현 상태에서 가장 비슷한 문법은 아래와 같다.<br />
+아래와 같이 작업후 ```시작 부분과 ```끝부분을 탭으로 밀어서 수정하는 것이다  </p>
 <p><img alt="Untitled" src="Untitled%203.png" /></p>
 <p>출력 결과물</p>
-<div class="highlight"><pre><span></span><code> <span class="o">===</span> <span class="s2">&quot;gradle&quot;</span>
+<p><div class="highlight"><pre><span></span><code> <span class="o">===</span> <span class="s2">&quot;gradle&quot;</span>
 
  <span class="err">```</span><span class="n">groovy</span>
  <span class="n">dependencies</span> <span class="o">{</span>
@@ -728,53 +776,32 @@ git push origin master
  <span class="o">}</span>
  <span class="err">```</span>
 </code></pre></div>
-<ol>
-<li>다음방법은 목록형으로 작성하는것이다.</li>
-</ol>
-<p><img alt="Untitled" src="Untitled%204.png" /></p>
-<p>출력결과물</p>
-<div class="highlight"><pre><span></span><code><span class="o">===</span> <span class="s">&quot;gradle&quot;</span>
-<span class="o">-</span>
-    <span class="err">```</span><span class="n">groovy</span>
-    <span class="n">dependencies</span> <span class="p">{</span>
-        <span class="n">coreLibraryDesugaring</span> <span class="err">&#39;</span><span class="n">com</span><span class="p">.</span><span class="na">android</span><span class="p">.</span><span class="na">tools</span><span class="p">:</span><span class="n">desugar_jdk_libs</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">5</span><span class="err">&#39;</span>
-    <span class="p">}</span>
-    <span class="err">```</span>
-
-<span class="o">===</span> <span class="s">&quot;kotlin&quot;</span>
-<span class="o">-</span>    
-    <span class="err">```</span><span class="n">kotlin</span>
-    <span class="n">dependencies</span> <span class="p">{</span>
-        <span class="n">coreLibraryDesugaring</span><span class="p">(</span><span class="s">&quot;com.android.tools:desugar_jdk_libs:1.1.5&quot;</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="err">```</span>
-</code></pre></div>
-<ol>
-<li>토글 항목으로 작성</li>
-</ol>
-<p><img alt="Untitled" src="Untitled%205.png" /></p>
-<p>출력결과물</p>
-<div class="highlight"><pre><span></span><code><span class="o">-</span> <span class="o">===</span> <span class="s">&quot;gradle&quot;</span>
+수정후
+<div class="highlight"><pre><span></span><code> <span class="o">===</span> <span class="s2">&quot;gradle&quot;</span>
 
     <span class="err">```</span><span class="n">groovy</span>
-    <span class="n">dependencies</span> <span class="p">{</span>
-        <span class="n">coreLibraryDesugaring</span> <span class="err">&#39;</span><span class="n">com</span><span class="p">.</span><span class="na">android</span><span class="p">.</span><span class="na">tools</span><span class="p">:</span><span class="n">desugar_jdk_libs</span><span class="p">:</span><span class="m">1.1</span><span class="p">.</span><span class="m">5</span><span class="err">&#39;</span>
-    <span class="p">}</span>
+    <span class="n">dependencies</span> <span class="o">{</span>
+        <span class="n">coreLibraryDesugaring</span> <span class="s1">&#39;com.android.tools:desugar_jdk_libs:1.1.5&#39;</span>
+    <span class="o">}</span>
     <span class="err">```</span>
 
-<span class="o">-</span> <span class="o">===</span> <span class="s">&quot;kotlin&quot;</span>
+ <span class="o">===</span> <span class="s2">&quot;kotlin&quot;</span>
 
     <span class="err">```</span><span class="n">kotlin</span>
-    <span class="n">dependencies</span> <span class="p">{</span>
-        <span class="n">coreLibraryDesugaring</span><span class="p">(</span><span class="s">&quot;com.android.tools:desugar_jdk_libs:1.1.5&quot;</span><span class="p">)</span>
-    <span class="p">}</span>
+    <span class="n">dependencies</span> <span class="o">{</span>
+        <span class="n">coreLibraryDesugaring</span><span class="o">(</span><span class="s2">&quot;com.android.tools:desugar_jdk_libs:1.1.5&quot;</span><span class="o">)</span>
+    <span class="o">}</span>
     <span class="err">```</span>
-</code></pre></div>
+</code></pre></div></p>
+<p>다음방법은 목록형으로 작성하는것이다.
+<img alt="Untitled" src="Untitled%204.png" /></p>
+<p>토글 항목으로 작성
+<img alt="Untitled" src="Untitled%205.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>적당한것을 선택할수 밖에 없다 </p>
 </div>
-<h3 id="_7">이미지 링크<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h3 id="_9">이미지 링크<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>notion 에서 설정 → 내보내기 → markdown을 사용해서 내보내면 zip 형태로 압축된 상태이고
 해당 이미지 링크는 다음과 같은 규칙으로 만들어진다.</p>
 <p><img alt="Untitled" src="Untitled%206.png" /></p>
