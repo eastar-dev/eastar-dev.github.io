@@ -20,7 +20,7 @@
     
     
       
-        <title>개발 Blog 만들기 ver MkDocs - Eastar's android develop</title>
+        <title>Notion과 MkDocs을 이용한 개발 Blog 만들기 - Eastar's android develop</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blog-ver-mkdocs" class="md-skip">
+        <a href="#notion-mkdocs-blog" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              개발 Blog 만들기 ver MkDocs
+              Notion과 MkDocs을 이용한 개발 Blog 만들기
             
           </span>
         </div>
@@ -278,7 +278,7 @@
   
     <li class="md-nav__item">
       <a href="../Truth%EB%A5%BC%20%EC%86%8C%EA%B0%9C%20%ED%95%A9%EB%8B%88%EB%8B%A4%20dfdd28fc2eb748448521b94f89e30c27/" class="md-nav__link">
-        Truth를 소개 합니다.
+        Hamcrest를 대체할 Google의 Truth를 소개 합니다.
       </a>
     </li>
   
@@ -302,12 +302,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          개발 Blog 만들기 ver MkDocs
+          Notion과 MkDocs을 이용한 개발 Blog 만들기
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        개발 Blog 만들기 ver MkDocs
+        Notion과 MkDocs을 이용한 개발 Blog 만들기
       </a>
       
         
@@ -649,16 +649,18 @@
                   </a>
                 
                 
-                <h1 id="blog-ver-mkdocs">개발 Blog 만들기 ver MkDocs<a class="headerlink" href="#blog-ver-mkdocs" title="Permanent link">&para;</a></h1>
+                <h1 id="notion-mkdocs-blog">Notion과 MkDocs을 이용한 개발 Blog 만들기<a class="headerlink" href="#notion-mkdocs-blog" title="Permanent link">&para;</a></h1>
 <p>Create: 2021년 9월 22일 오후 11:55</p>
 <h2 id="mkdocs">MkDocs<a class="headerlink" href="#mkdocs" title="Permanent link">&para;</a></h2>
-<p>MkDocs를 이용해서 정정 페이지를 만들어 보자</p>
+<p>이글은 블로그의 설치에 중점이 없고 Notion을 이용해서 글을 정리하는 분들에게<br />
+<a href="https://squidfunk.github.io/mkdocs-material/reference/abbreviations/">Mkdocs Material</a> 이용해서 정적 페이지를 만들어 운영하는 분들게 도움을 주고자 만들었다.<br />
+따라서 Mkdocs Material을 이용한 정적블로그 생성에 대해서는 자세히 나와 있지 않다.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>이 페이지을 보지 못했다면 이생각을 하지 않았을것이다.<br />
 <a href="https://squidfunk.github.io/mkdocs-material/reference/abbreviations/">https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</a></p>
 </div>
-<p>블로그에는 안드로이드 관련내용만 올리려 했으나 운영을 위해 이글을 매번보게 되서 올린다.</p>
+<p>블로그에는 안드로이드 관련 내용만 올리려 했으나 운영을 위해 이글을 매번보게 되서 올린다.</p>
 <h2 id="_1">설치<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">mkdocs</span><span class="o">-</span><span class="n">material</span>
@@ -715,19 +717,29 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
 <h3 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h3>
 <p>코드는 기본적으로 ```kotlin ~~~ ``` 과 같은 형태로 나타는다.</p>
 <div class="highlight"><pre><span></span><code> <span class="err">```</span><span class="n">kotlin</span>
- <span class="n">fun</span> <span class="n">main</span><span class="o">()</span> <span class="o">{</span>
+ <span class="n">fun</span> <span class="nf">main</span><span class="o">()</span> <span class="o">{</span>
      <span class="n">println</span><span class="o">(</span><span class="s2">&quot;hello world&quot;</span><span class="o">)</span>
  <span class="o">}</span>
  <span class="err">```</span>
 </code></pre></div>
 <p><img alt="Untitled" src="Untitled%201.png" /></p>
 <h3 id="_9">선택형 코드<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>이 형태를 완벽하게 지원하는 notion의 문법은 없다</p>
+<p>아래와 같은 형태를 표현하려면</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">gradle</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">coreLibraryDesugaring</span> <span class="s1">&#39;com.android.tools:desugar_jdk_libs:1.1.5&#39;</span>
+<span class="o">}</span>
+</code></pre></div>
 </div>
-<p>아래와 같은 markdown 파일을 출력을 하면된다.</p>
-<p><div class="highlight"><pre><span></span><code><span class="o">===</span> <span class="s2">&quot;gradle&quot;</span>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">kotlin</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="p">{</span>
+    <span class="n">coreLibraryDesugaring</span><span class="p">(</span><span class="s">&quot;com.android.tools:desugar_jdk_libs:1.1.5&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<p>다음 markdown 파일을 출력을 하면된다.
+<div class="highlight"><pre><span></span><code><span class="o">===</span> <span class="s2">&quot;gradle&quot;</span>
 
     <span class="err">```</span><span class="n">groovy</span>
     <span class="n">dependencies</span> <span class="o">{</span>
@@ -742,20 +754,10 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
         <span class="n">coreLibraryDesugaring</span><span class="o">(</span><span class="s2">&quot;com.android.tools:desugar_jdk_libs:1.1.5&quot;</span><span class="o">)</span>
     <span class="o">}</span>
     <span class="err">```</span>
-</code></pre></div>
-결과물</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">gradle</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
-    <span class="n">coreLibraryDesugaring</span> <span class="s1">&#39;com.android.tools:desugar_jdk_libs:1.1.5&#39;</span>
-<span class="o">}</span>
-</code></pre></div>
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">kotlin</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="p">{</span>
-    <span class="n">coreLibraryDesugaring</span><span class="p">(</span><span class="s">&quot;com.android.tools:desugar_jdk_libs:1.1.5&quot;</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div>
-</div>
+</code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>이 형태를 완벽하게 지원하는 notion의 문법은 없다</p>
 </div>
 <p>현 상태에서 가장 비슷한 문법은 아래와 같다.<br />
 아래와 같이 작업후 ```시작 부분과 ```끝부분을 탭으로 밀어서 수정하는 것이다  </p>
@@ -850,7 +852,7 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../Truth%EB%A5%BC%20%EC%86%8C%EA%B0%9C%20%ED%95%A9%EB%8B%88%EB%8B%A4%20dfdd28fc2eb748448521b94f89e30c27/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Truth를 소개 합니다." rel="prev">
+        <a href="../Truth%EB%A5%BC%20%EC%86%8C%EA%B0%9C%20%ED%95%A9%EB%8B%88%EB%8B%A4%20dfdd28fc2eb748448521b94f89e30c27/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hamcrest를 대체할 Google의 Truth를 소개 합니다." rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -859,7 +861,7 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Truth를 소개 합니다.
+              Hamcrest를 대체할 Google의 Truth를 소개 합니다.
             </div>
           </div>
         </a>
