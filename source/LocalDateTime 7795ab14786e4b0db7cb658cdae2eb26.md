@@ -79,7 +79,7 @@ dependencies {
 }
 ```
 
-!!! note
+!!! warning
     사용해본 결과는 모든 함수를 지원하지는 않는다.  
     [https://developer.android.com/studio/write/java8-support-table](https://developer.android.com/studio/write/java8-support-table)
 
