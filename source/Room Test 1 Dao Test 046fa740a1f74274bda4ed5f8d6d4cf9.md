@@ -13,33 +13,16 @@ Room 은 Jetpack libraries중에서 DB관련 라이브러리 이며,
 2.4.0-alphaXX 부터 [`AutoMigration`](https://developer.android.com/reference/androidx/room/AutoMigration) 을 지원해요.  
 자세한건 아래 링크를 참조
 
-[](https://developer.android.com/jetpack/androidx/releases/room)
+[AutoMigration 참조 링크](https://developer.android.com/jetpack/androidx/releases/room)
 
 ## Gradle
 
 ```groovy
 dependencies {
-		def room_version = "2.4.0-alpha05"
+	def room_version = "2.4.0-alpha05"
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
-    testImplementation "androidx.room:room-testing:$room_version"
-		androidTestImplementation "androidx.room:room-testing:$room_version"
-}
-```
-
-```kotlin
-android {
-    defaultConfig {
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments += [
-                    "room.schemaLocation":"$projectDir/schemas".toString(),
-                    "room.incremental":"true",
-                    "room.expandProjection":"true"]
-            }
-        }
-    }
 }
 ```
 
@@ -76,7 +59,7 @@ room database에서는 버전이 있고 이 버전은 프로그램의 변경에 
 
 room Migration Test는 다른 test와 좀다르게 불편한 부분이 있고 주의해야 할점도 있어요.
 
-이 글에서 핵심은 Migration Test고 이 부분에 대해서 좀 더심도 있게 다룰 생각이에요.
+다음 글에서 좀더 상세하게 Migration Test를 다룰꺼에요.
 
 ## Android Instrumented Test
 
@@ -187,6 +170,7 @@ unit test code
 @RunWith(RobolectricTestRunner::class)
 class TestDatabaseUnitTest {
    ...
+}
 ```
 
 제가 알고 있는 가장 간단한 Robolectric사용법이에요

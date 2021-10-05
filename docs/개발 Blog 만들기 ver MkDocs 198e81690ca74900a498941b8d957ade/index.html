@@ -451,6 +451,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#code-highlight" class="md-nav__link">
+    Code highlight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
     선택형 코드
   </a>
@@ -465,8 +472,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#page-link" class="md-nav__link">
-    Page Link
+  <a href="#another-page-link" class="md-nav__link">
+    Another Page Link
   </a>
   
 </li>
@@ -636,6 +643,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#code-highlight" class="md-nav__link">
+    Code highlight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
     선택형 코드
   </a>
@@ -650,8 +664,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#page-link" class="md-nav__link">
-    Page Link
+  <a href="#another-page-link" class="md-nav__link">
+    Another Page Link
   </a>
   
 </li>
@@ -752,13 +766,28 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
 </ol>
 <h3 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h3>
 <p>코드는 기본적으로 ```kotlin ~~~ ``` 과 같은 형태로 나타는다.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;hello world&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
 <div class="highlight"><pre><span></span><code> <span class="err">```</span><span class="n">kotlin</span>
  <span class="n">fun</span> <span class="nf">main</span><span class="o">()</span> <span class="o">{</span>
      <span class="n">println</span><span class="o">(</span><span class="s2">&quot;hello world&quot;</span><span class="o">)</span>
  <span class="o">}</span>
  <span class="err">```</span>
 </code></pre></div>
-<p><img alt="Untitled" src="Untitled%201.png" /></p>
+<h3 id="code-highlight">Code highlight<a class="headerlink" href="#code-highlight" title="Permanent link">&para;</a></h3>
+<p>hl_lines="2" 를 이용해서 코드에 highlight를 넣었어요</p>
+<div class="highlight"><pre><span></span><code><span class="kd">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="hll">    <span class="n">println</span><span class="p">(</span><span class="s">&quot;hello world&quot;</span><span class="p">)</span>
+</span><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code> <span class="err">```</span><span class="n">kotlin</span> <span class="n">hl_lines</span><span class="o">=</span><span class="s2">&quot;2&quot;</span>
+ <span class="n">fun</span> <span class="nf">main</span><span class="o">()</span> <span class="o">{</span>
+     <span class="n">println</span><span class="o">(</span><span class="s2">&quot;hello world&quot;</span><span class="o">)</span>
+ <span class="o">}</span>
+ <span class="err">```</span>
+</code></pre></div>
 <h3 id="_9">선택형 코드<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>아래와 같은 형태를 표현하려면</p>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">gradle</label><div class="tabbed-content">
@@ -865,7 +894,7 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
 <div class="highlight"><pre><span></span><code>찾기 : !\[Untitled\]\(.*\/(Untitled(?:|%20\d+))\.png\)
 바꾸기 : ![Untitled]($1.png)
 </code></pre></div>
-<h3 id="page-link">Page Link<a class="headerlink" href="#page-link" title="Permanent link">&para;</a></h3>
+<h3 id="another-page-link">Another Page Link<a class="headerlink" href="#another-page-link" title="Permanent link">&para;</a></h3>
 <p><a href="..">Index page Link</a></p>
 <div class="highlight"><pre><span></span><code>[Index page Link][2]
   [2]: index.md

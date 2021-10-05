@@ -573,29 +573,14 @@ Tag: android, db, test</p>
 <p>글을 작성하는 시점을 기준으로 Stable Release 2.3.0, Alpha 2.4.0-alpha05이 나와있어요.</p>
 <p>2.4.0-alphaXX 부터 <a href="https://developer.android.com/reference/androidx/room/AutoMigration"><code>AutoMigration</code></a> 을 지원해요.<br />
 자세한건 아래 링크를 참조</p>
-<p><a href="https://developer.android.com/jetpack/androidx/releases/room"></a></p>
+<p><a href="https://developer.android.com/jetpack/androidx/releases/room">AutoMigration 참조 링크</a></p>
 <h2 id="gradle">Gradle<a class="headerlink" href="#gradle" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
-        <span class="kt">def</span> <span class="n">room_version</span> <span class="o">=</span> <span class="s2">&quot;2.4.0-alpha05&quot;</span>
+    <span class="kt">def</span> <span class="n">room_version</span> <span class="o">=</span> <span class="s2">&quot;2.4.0-alpha05&quot;</span>
     <span class="n">implementation</span> <span class="s2">&quot;androidx.room:room-runtime:$room_version&quot;</span>
     <span class="n">kapt</span> <span class="s2">&quot;androidx.room:room-compiler:$room_version&quot;</span>
     <span class="n">implementation</span> <span class="s2">&quot;androidx.room:room-ktx:$room_version&quot;</span>
-    <span class="n">testImplementation</span> <span class="s2">&quot;androidx.room:room-testing:$room_version&quot;</span>
-        <span class="n">androidTestImplementation</span> <span class="s2">&quot;androidx.room:room-testing:$room_version&quot;</span>
 <span class="o">}</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">android</span> <span class="p">{</span>
-    <span class="n">defaultConfig</span> <span class="p">{</span>
-        <span class="n">javaCompileOptions</span> <span class="p">{</span>
-            <span class="n">annotationProcessorOptions</span> <span class="p">{</span>
-                <span class="n">arguments</span> <span class="o">+=</span> <span class="o">[</span>
-                    <span class="s">&quot;room.schemaLocation&quot;</span><span class="p">:</span><span class="s">&quot;</span><span class="si">$</span><span class="n">projectDir</span><span class="s">/schemas&quot;</span><span class="p">.</span><span class="na">toString</span><span class="p">(),</span>
-                    <span class="s">&quot;room.incremental&quot;</span><span class="p">:</span><span class="s">&quot;true&quot;</span><span class="p">,</span>
-                    <span class="s">&quot;room.expandProjection&quot;</span><span class="p">:</span><span class="s">&quot;true&quot;</span><span class="o">]</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
 </code></pre></div>
 <h2 id="room-test">Room Test<a class="headerlink" href="#room-test" title="Permanent link">&para;</a></h2>
 <p><a href="https://developer.android.com/training/data-storage/room/testing-db"></a></p>
@@ -616,7 +601,7 @@ Room은 CRUD의 대부분을 Dao class에서 할수 있어요.</p>
 <p>room database에서는 버전이 있고 이 버전은 프로그램의 변경에 따라<br />
 이전 사용자들을 업그레이드 하면서 변경해요. 이걸 마이그레이션 이라 해요</p>
 <p>room Migration Test는 다른 test와 좀다르게 불편한 부분이 있고 주의해야 할점도 있어요.</p>
-<p>이 글에서 핵심은 Migration Test고 이 부분에 대해서 좀 더심도 있게 다룰 생각이에요.</p>
+<p>다음 글에서 좀더 상세하게 Migration Test를 다룰꺼에요.</p>
 <h2 id="android-instrumented-test">Android Instrumented Test<a class="headerlink" href="#android-instrumented-test" title="Permanent link">&para;</a></h2>
 <p>아래와 같은 코드를 test 할꺼에요</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@Dao</span>
@@ -710,6 +695,7 @@ test block을 coroutine <code>runBlocking</code>으로 감싸서 test 합니다.
 <span class="nd">@RunWith</span><span class="p">(</span><span class="n">RobolectricTestRunner</span><span class="o">::</span><span class="n">class</span><span class="p">)</span>
 <span class="kd">class</span> <span class="nc">TestDatabaseUnitTest</span> <span class="p">{</span>
    <span class="p">...</span>
+<span class="p">}</span>
 </code></pre></div>
 <p>제가 알고 있는 가장 간단한 Robolectric사용법이에요</p>
 <h3 id="unit-test-code">unit test code<a class="headerlink" href="#unit-test-code" title="Permanent link">&para;</a></h3>
