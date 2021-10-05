@@ -700,12 +700,23 @@ git commit -m <span class="s2">&quot;posting&quot;</span>
 git push origin master
 </code></pre></div>
 <h3 id="_6">빌드 및 배포<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Windows</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>mkdocs build
 git add .
 git commit -m <span class="s2">&quot;posting&quot;</span>
 git push origin master
 cls
 </code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Mac</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>mkdocs build
+git add .
+git commit -m <span class="s2">&quot;posting&quot;</span>
+git push origin master
+clear
+</code></pre></div>
+</div>
+</div>
 <h2 id="_7">글 작성방법<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <h3 id="_8">제목<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>제목에 괄호가 들어가는 문서를 만들지 말자</p>
@@ -740,13 +751,13 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
 <p><img alt="Untitled" src="Untitled%201.png" /></p>
 <h3 id="_9">선택형 코드<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>아래와 같은 형태를 표현하려면</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">gradle</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">gradle</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
     <span class="n">coreLibraryDesugaring</span> <span class="s1">&#39;com.android.tools:desugar_jdk_libs:1.1.5&#39;</span>
 <span class="o">}</span>
 </code></pre></div>
 </div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">kotlin</label><div class="tabbed-content">
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">kotlin</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="p">{</span>
     <span class="n">coreLibraryDesugaring</span><span class="p">(</span><span class="s">&quot;com.android.tools:desugar_jdk_libs:1.1.5&quot;</span><span class="p">)</span>
 <span class="p">}</span>
