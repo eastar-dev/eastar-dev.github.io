@@ -1,8 +1,8 @@
 site_name: Eastar's android develop
 site_author: Eastar Jeong
 site_description: A blog created to help others with what I have organized while developing Android.
-repo_url: https://github.com/eastar-dev/eastar-dev.github.io
-edit_uri: edit/master/source/
+repo_url: https://github.com/eastar-dev
+edit_uri: ""
 site_url: https://eastar-dev.github.io/
 repo_name: eastar-dev
 docs_dir: source
@@ -40,7 +40,7 @@ markdown_extensions:
 theme:
   name: material
   font:
-    text: Roboto
+    text: Nanum Gothic
     code: Roboto Mono
   logo: assets/logo.svg
   favicon: assets/logo.svg
