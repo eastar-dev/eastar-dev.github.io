@@ -146,16 +146,16 @@ class TestDatabaseTest {
 }
 ```
 
-=== tip
+!!! tip
 
-inMemoryDatabase를 이용해서 test를 하고  
-test block을 coroutine `runBlocking`으로 감싸서 test 합니다.
+    inMemoryDatabase를 이용해서 test를 하고  
+    test block을 coroutine `runBlocking`으로 감싸서 test 합니다.
 
-=== etc
+!!! etc
 
-```kotlin
-import com.google.common.truth.Truth.assertThat
-```
+    ```kotlin
+    import com.google.common.truth.Truth.assertThat
+    ```
 
 ## Unit Test
 
