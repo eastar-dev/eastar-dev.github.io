@@ -666,7 +666,7 @@ assert를 사용해서 확인 해야해요</p>
 <p>코드는 길지만 내용은 간단해요.<br />
 date의 값이 long를 사용해서 저장 했는데<br />
 String를 사용해서 변경 하는 내용입니다.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">val</span> <span class="nv">MIGRATION_2_3</span> <span class="o">=</span> <span class="k">object</span> <span class="p">:</span> <span class="nc">Migration</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span> <span class="p">{</span>
+<p><div class="highlight"><pre><span></span><code><span class="kd">val</span> <span class="nv">MIGRATION_2_3</span> <span class="o">=</span> <span class="k">object</span> <span class="p">:</span> <span class="nc">Migration</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">override</span> <span class="kd">fun</span> <span class="nf">migrate</span><span class="p">(</span><span class="n">database</span><span class="p">:</span> <span class="n">SupportSQLiteDatabase</span><span class="p">)</span> <span class="p">{</span>
         <span class="cm">/** copy form data/schemas/dev.eastar.roomtest.data.db.TestDatabase/3.json */</span>
         <span class="kd">val</span> <span class="nv">tempTable</span> <span class="o">=</span>
@@ -709,14 +709,14 @@ String를 사용해서 변경 하는 내용입니다.</p>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+migration은 table 구조만 검증해주기 때문에 내용은 직접 검증해야 해요.<br />
+그리고 생각보다 Table column type도 일일이 챙겨야 해요</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>migrateion 에서 삭제와 변경을 지원 하지 않기 때문에<br />
 dummyTable → 복사 → 원본삭제 → dummyTable이름 변경<br />
 이라는 엄청난 과정을 거쳐야 합니다.</p>
 </div>
-<p>migration은 table 구조만 검증해주기 때문에 내용은 직접 검증해야 해요.<br />
-그리고 생각보다 Table column type도 일일이 챙겨야 해요</p>
 <details class="tip"><summary>CREATE TABLE QUERY는 어디에서 가져올까?</summary><p><div class="highlight"><pre><span></span><code>val tempTable = &quot;&quot;&quot;CREATE TABLE IF NOT EXISTS 
     `USERS_3` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 
         `name` TEXT NOT NULL, 

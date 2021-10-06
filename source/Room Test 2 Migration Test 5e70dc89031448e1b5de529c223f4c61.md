@@ -151,6 +151,9 @@ val MIGRATION_2_3 = object : Migration(2, 3) {
     }
 }
 ```
+migration은 table 구조만 검증해주기 때문에 내용은 직접 검증해야 해요.  
+그리고 생각보다 Table column type도 일일이 챙겨야 해요
+
 
 !!! note
 
@@ -158,8 +161,6 @@ val MIGRATION_2_3 = object : Migration(2, 3) {
     dummyTable → 복사 → 원본삭제 → dummyTable이름 변경  
     이라는 엄청난 과정을 거쳐야 합니다.
 
-migration은 table 구조만 검증해주기 때문에 내용은 직접 검증해야 해요.  
-그리고 생각보다 Table column type도 일일이 챙겨야 해요
 
 ??? tip "CREATE TABLE QUERY는 어디에서 가져올까?"
     ```
