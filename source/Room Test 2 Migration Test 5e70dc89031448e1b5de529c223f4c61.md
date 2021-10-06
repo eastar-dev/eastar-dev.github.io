@@ -419,7 +419,7 @@ class TestDatabaseUnitTest {
 
 
 
-!!! warning "아래 내용을 꼭 넣어야 되요. 첨부파일"
+!!! warning "아래 파일을 소스에 넣어 바꿔치기 꼼수를 써야 합니다. 첨부파일"
     
     [MigrationTestHelper.java](Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61/MigrationTestHelper.java)
 
