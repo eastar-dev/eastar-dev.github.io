@@ -506,6 +506,54 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Room Test
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Room Test" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Room Test
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Room%20Test/Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61/" class="md-nav__link">
+        Room Test 2 Migration Test
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -688,9 +736,9 @@
               
                 
                 
-                <h1 id="notion-mkdocs-blog">Notion과 MkDocs을 이용한 개발 Blog 만들기<a class="headerlink" href="#notion-mkdocs-blog" title="Permanent link">&para;</a></h1>
+                <h1 id="notion-mkdocs-blog">Notion과 MkDocs을 이용한 개발 Blog 만들기<a class="headerlink" href="#notion-mkdocs-blog" title="Permanent link">#</a></h1>
 <p>Create: 2021년 9월 22일 오후 11:55</p>
-<h2 id="mkdocs">MkDocs<a class="headerlink" href="#mkdocs" title="Permanent link">&para;</a></h2>
+<h2 id="mkdocs">MkDocs<a class="headerlink" href="#mkdocs" title="Permanent link">#</a></h2>
 <p>이글은 블로그의 설치에 중점이 없고 Notion을 이용해서 글을 정리하는 분들에게<br />
 <a href="https://squidfunk.github.io/mkdocs-material/reference/abbreviations/">Mkdocs Material</a> 이용해서 정적 페이지를 만들어 운영하는 분들게 도움을 주고자 만들었다.<br />
 따라서 Mkdocs Material을 이용한 정적블로그 생성에 대해서는 자세히 나와 있지 않다.</p>
@@ -700,30 +748,30 @@
 <a href="https://squidfunk.github.io/mkdocs-material/reference/abbreviations/">https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</a></p>
 </div>
 <p>블로그에는 안드로이드 관련 내용만 올리려 했으나 운영을 위해 이글을 매번보게 되서 올린다.</p>
-<h2 id="_1">설치<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h3>
+<h2 id="_1">설치<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<h3 id="install">Install<a class="headerlink" href="#install" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">mkdocs</span><span class="o">-</span><span class="n">material</span>
 </code></pre></div>
-<h3 id="upgrade">Upgrade<a class="headerlink" href="#upgrade" title="Permanent link">&para;</a></h3>
+<h3 id="upgrade">Upgrade<a class="headerlink" href="#upgrade" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code>pip install --upgrade mkdocs-material
 </code></pre></div>
-<h3 id="inspect">Inspect<a class="headerlink" href="#inspect" title="Permanent link">&para;</a></h3>
+<h3 id="inspect">Inspect<a class="headerlink" href="#inspect" title="Permanent link">#</a></h3>
 <p>Inspect the currently installed version with:</p>
 <div class="highlight"><pre><span></span><code>pip show mkdocs-material
 </code></pre></div>
-<h2 id="_2">운영<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">서버시작<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h2 id="_2">운영<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<h3 id="_3">서버시작<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code>mkdocs serve
 </code></pre></div>
-<h3 id="_4">빌드<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_4">빌드<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code>mkdocs build
 </code></pre></div>
-<h3 id="_5">배포<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_5">배포<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code>git add .
 git commit -m <span class="s2">&quot;posting&quot;</span>
 git push origin master
 </code></pre></div>
-<h3 id="_6">빌드 및 배포<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_6">빌드 및 배포<a class="headerlink" href="#_6" title="Permanent link">#</a></h3>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Windows</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>mkdocs build
 git add .
@@ -741,11 +789,11 @@ clear
 </code></pre></div>
 </div>
 </div>
-<h2 id="_7">글 작성방법<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<h3 id="_8">제목<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h2 id="_7">글 작성방법<a class="headerlink" href="#_7" title="Permanent link">#</a></h2>
+<h3 id="_8">제목<a class="headerlink" href="#_8" title="Permanent link">#</a></h3>
 <p>제목에 괄호가 들어가는 문서를 만들지 말자</p>
 <p>문서의 제목은 이미지 폴더의 이름으로 사용되는데 이미지 링크 연결시 마크다운 문법과 링크를 걸때 사용하는 괄호가 충돌 해서 수정이 불가피해진다.</p>
-<h3 id="note">Note<a class="headerlink" href="#note" title="Permanent link">&para;</a></h3>
+<h3 id="note">Note<a class="headerlink" href="#note" title="Permanent link">#</a></h3>
 <ol>
 <li>시작을 !!!로 시작하다.</li>
 <li>줄바꿈은 shift + enter</li>
@@ -764,7 +812,7 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
 </div>
 </li>
 </ol>
-<h3 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h3>
+<h3 id="code">Code<a class="headerlink" href="#code" title="Permanent link">#</a></h3>
 <p>코드는 기본적으로 ```kotlin ~~~ ``` 과 같은 형태로 나타는다.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">println</span><span class="p">(</span><span class="s">&quot;hello world&quot;</span><span class="p">)</span>
@@ -776,7 +824,7 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
  <span class="o">}</span>
  <span class="err">```</span>
 </code></pre></div>
-<h3 id="code-highlight">Code highlight<a class="headerlink" href="#code-highlight" title="Permanent link">&para;</a></h3>
+<h3 id="code-highlight">Code highlight<a class="headerlink" href="#code-highlight" title="Permanent link">#</a></h3>
 <p>hl_lines="2" 를 이용해서 코드에 highlight를 넣었어요</p>
 <div class="highlight"><pre><span></span><code><span class="kd">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 <span class="hll">    <span class="n">println</span><span class="p">(</span><span class="s">&quot;hello world&quot;</span><span class="p">)</span>
@@ -788,7 +836,7 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
  <span class="o">}</span>
  <span class="err">```</span>
 </code></pre></div>
-<h3 id="_9">선택형 코드<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="_9">선택형 코드<a class="headerlink" href="#_9" title="Permanent link">#</a></h3>
 <p>아래와 같은 형태를 표현하려면</p>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">gradle</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
@@ -869,7 +917,7 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
 <p class="admonition-title">Note</p>
 <p>적당한것을 선택할수 밖에 없다 </p>
 </div>
-<h3 id="_10">이미지 링크<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<h3 id="_10">이미지 링크<a class="headerlink" href="#_10" title="Permanent link">#</a></h3>
 <p>notion 에서 설정 → 내보내기 → markdown을 사용해서 내보내면 zip 형태로 압축된 상태이고
 해당 이미지 링크는 다음과 같은 규칙으로 만들어진다.</p>
 <p><img alt="Untitled" src="Untitled%206.png" /></p>
@@ -894,7 +942,7 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
 <div class="highlight"><pre><span></span><code>찾기 : !\[Untitled\]\(.*\/(Untitled(?:|%20\d+))\.png\)
 바꾸기 : ![Untitled]($1.png)
 </code></pre></div>
-<h3 id="another-page-link">Another Page Link<a class="headerlink" href="#another-page-link" title="Permanent link">&para;</a></h3>
+<h3 id="another-page-link">Another Page Link<a class="headerlink" href="#another-page-link" title="Permanent link">#</a></h3>
 <p><a href="..">Index page Link</a></p>
 <div class="highlight"><pre><span></span><code>[Index page Link][2]
   [2]: index.md

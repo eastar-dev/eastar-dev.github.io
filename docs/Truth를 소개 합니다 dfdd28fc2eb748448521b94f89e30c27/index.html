@@ -424,6 +424,54 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Room Test
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Room Test" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Room Test
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Room%20Test/Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61/" class="md-nav__link">
+        Room Test 2 Migration Test
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -524,15 +572,15 @@
               
                 
                 
-                <h1 id="hamcrest-google-truth">Hamcrest를 대체할 Google의 Truth를 소개 합니다.<a class="headerlink" href="#hamcrest-google-truth" title="Permanent link">&para;</a></h1>
+                <h1 id="hamcrest-google-truth">Hamcrest를 대체할 Google의 Truth를 소개 합니다.<a class="headerlink" href="#hamcrest-google-truth" title="Permanent link">#</a></h1>
 <p>Create: 2021년 8월 18일 오후 2:01
 Tag: android, test
 blog: Yes</p>
-<h2 id="what-is-truth">What is Truth?<a class="headerlink" href="#what-is-truth" title="Permanent link">&para;</a></h2>
+<h2 id="what-is-truth">What is Truth?<a class="headerlink" href="#what-is-truth" title="Permanent link">#</a></h2>
 <p>편안하게 사용할수 있는 Java 및 Android용 Assertions library</p>
 <p>Guava 팀에서 소유하고 유지하는 Assertions library</p>
 <p>Google 자체 코드베이스의 대부분의 테스트에 사용됩니다.</p>
-<h2 id="why">Why?<a class="headerlink" href="#why" title="Permanent link">&para;</a></h2>
+<h2 id="why">Why?<a class="headerlink" href="#why" title="Permanent link">#</a></h2>
 <p>이미 assertEquals가 있는데 이것 배워야 하나요?</p>
 <p>asis</p>
 <div class="highlight"><pre><span></span><code><span class="n">assertEquals</span><span class="p">(</span>
@@ -563,11 +611,11 @@ multimap was: {corelibs=[guava, auto, dagger, caliper]}<br />
 at com.google.common.truth.example.DemoTest.testTruth(DemoTest.java:71)
 </p>
 </blockquote>
-<h2 id="assertj">AssertJ의 항변<a class="headerlink" href="#assertj" title="Permanent link">&para;</a></h2>
+<h2 id="assertj">AssertJ의 항변<a class="headerlink" href="#assertj" title="Permanent link">#</a></h2>
 <p>Truth와 AssertJ 는 매우 유사합니다.</p>
 <p>우리는 더 간단한 API를 위해 Truth를 선호</p>
 <p>Truth 를 만들때 AssertJ는 존재 하지 않았습니다.</p>
-<h2 id="hamcrest">Hamcrest의 항변<a class="headerlink" href="#hamcrest" title="Permanent link">&para;</a></h2>
+<h2 id="hamcrest">Hamcrest의 항변<a class="headerlink" href="#hamcrest" title="Permanent link">#</a></h2>
 <p>서로 많이 다름</p>
 <p>Truth는 chained method calls이 가능</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Hamcrest와 차이</label><div class="tabbed-content">
@@ -577,18 +625,18 @@ at com.google.common.truth.example.DemoTest.testTruth(DemoTest.java:71)
 <p>Hamcrest is a more general “matching” library, used not only for making assertions but also for setting expections on mocking frameworks, with matchers composed together in arbitrary ways. But this flexibility requires complex generics and makes it hard for Hamcrest to produce readable failure messages.</p>
 </div>
 </div>
-<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h2>
-<h3 id="gradle">gradle<a class="headerlink" href="#gradle" title="Permanent link">&para;</a></h3>
+<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">#</a></h2>
+<h3 id="gradle">gradle<a class="headerlink" href="#gradle" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">testImplementation</span> <span class="s">&quot;com.google.truth:truth:1.1.3&quot;</span>
 
 <span class="c1">//java8 확장이 필요한경우</span>
 <span class="n">testImplementation</span> <span class="s">&quot;com.google.truth.extensions:truth-java8-extension:1.1.3&quot;</span>
 </code></pre></div>
-<h3 id="import">import<a class="headerlink" href="#import" title="Permanent link">&para;</a></h3>
+<h3 id="import">import<a class="headerlink" href="#import" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nn">static</span> <span class="n">com</span><span class="p">.</span><span class="na">google</span><span class="p">.</span><span class="na">common</span><span class="p">.</span><span class="na">truth</span><span class="p">.</span><span class="na">Truth</span><span class="p">.</span><span class="na">assertThat</span>
 <span class="k">import</span> <span class="nn">static</span> <span class="n">com</span><span class="p">.</span><span class="na">google</span><span class="p">.</span><span class="na">common</span><span class="p">.</span><span class="na">truth</span><span class="p">.</span><span class="na">Truth</span><span class="p">.</span><span class="na">assertWithMessage</span>
 </code></pre></div>
-<h3 id="sample">sample<a class="headerlink" href="#sample" title="Permanent link">&para;</a></h3>
+<h3 id="sample">sample<a class="headerlink" href="#sample" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kt">String</span> <span class="n">string</span> <span class="o">=</span> <span class="s">&quot;awesome&quot;</span><span class="p">;</span>
 <span class="n">assertThat</span><span class="p">(</span><span class="n">string</span><span class="p">).</span><span class="na">startsWith</span><span class="p">(</span><span class="s">&quot;awe&quot;</span><span class="p">);</span>
 <span class="n">assertWithMessage</span><span class="p">(</span><span class="s">&quot;Without me, it&#39;s just aweso&quot;</span><span class="p">).</span><span class="na">that</span><span class="p">(</span><span class="n">string</span><span class="p">).</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;me&quot;</span><span class="p">);</span>

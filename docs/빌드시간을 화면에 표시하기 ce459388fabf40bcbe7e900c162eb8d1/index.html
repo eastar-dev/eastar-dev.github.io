@@ -390,6 +390,54 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Room Test
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Room Test" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Room Test
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Room%20Test/Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61/" class="md-nav__link">
+        Room Test 2 Migration Test
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -456,16 +504,16 @@
               
                 
                 
-                <h1 id="_1">빌드시간을 화면에 표시하기<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+                <h1 id="_1">빌드시간을 화면에 표시하기<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
 <p>Create: 2021년 6월 6일 오후 9:55
 Tag: android, tip</p>
-<h2 id="_2">"나는 네가 빌드된 시간을 알고 싶다."<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">"나는 네가 빌드된 시간을 알고 싶다."<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
 <p><img alt="https://media.giphy.com/media/yUZXFSW5rsgBq/giphy.gif" src="https://media.giphy.com/media/yUZXFSW5rsgBq/giphy.gif" /></p>
 <p>라는 단순한 욕망(?)으로 시작한 일이다.</p>
 <p>하지만 생각보다 효과가 좋았고 이것을 이용해서 언제 설치 한지도 모르는 앱을 디버깅 하는 일은 없어졌다. </p>
 <p>BuildConfig에 빌드시 변수 삽입(Groovy, KTS)을 해서 화면에 이것을 보여준다.</p>
 <p>빌드 시간을 변수로 넣고 싶을 때 라는 생각으로 시작한 작업 </p>
-<h2 id="buildconfig">BuildConfig<a class="headerlink" href="#buildconfig" title="Permanent link">&para;</a></h2>
+<h2 id="buildconfig">BuildConfig<a class="headerlink" href="#buildconfig" title="Permanent link">#</a></h2>
 <p>build.gradle 의 defaultConfig</p>
 <p>모든 Build variants에 적용됨</p>
 <div class="highlight"><pre><span></span><code><span class="n">defaultConfig</span> <span class="o">{</span>
@@ -496,11 +544,11 @@ Tag: android, tip</p>
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>
-<h2 id="_3">사용방법<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3">사용방법<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">String</span> <span class="n">key</span> <span class="o">=</span> <span class="n">BuildConfig</span><span class="p">.</span><span class="na">SOME_KEY</span><span class="p">;</span>
 </code></pre></div>
 <p><strong><em>BuildConfig 는 모듈마다 작성된다. import 를 확인해서 원치 않는 것을 가져왔는지 확인하자</em></strong></p>
-<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h2>
+<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">#</a></h2>
 <p>build.gradle.kts</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.text.SimpleDateFormat</span>
 <span class="kn">import</span> <span class="nn">java.util.*</span>
@@ -567,6 +615,21 @@ Tag: android, tip</p>
           </div>
         </a>
       
+      
+        
+        <a href="../Room%20Test/Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61/" class="md-footer__link md-footer__link--next" aria-label="Next: Room Test 2 Migration Test" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Room Test 2 Migration Test
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

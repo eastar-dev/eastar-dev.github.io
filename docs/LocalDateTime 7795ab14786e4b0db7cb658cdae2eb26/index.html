@@ -437,6 +437,54 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Room Test
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Room Test" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Room Test
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Room%20Test/Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61/" class="md-nav__link">
+        Room Test 2 Migration Test
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -550,34 +598,34 @@
               
                 
                 
-                <h1 id="localdatetime">LocalDateTime<a class="headerlink" href="#localdatetime" title="Permanent link">&para;</a></h1>
+                <h1 id="localdatetime">LocalDateTime<a class="headerlink" href="#localdatetime" title="Permanent link">#</a></h1>
 <p>Create: 2021년 10월 1일 오후 12:52
 Tag: android</p>
-<h2 id="_1">안드로이드에서 시간표시 방법<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="_1">안드로이드에서 시간표시 방법<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <p><a href="https://developer.android.com/reference/java/time/package-summary">https://developer.android.com/reference/java/time/package-summary</a></p>
 <p>안드로이드 26에서 부터 새로 추가된 LocalDateTime을 기준으로 안드로이드에 시간 표시 방법에 대하여 이야기 해보려고 한다.</p>
-<h2 id="_2">안드로이드에서 시간<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="currenttimemillis">currentTimeMillis<a class="headerlink" href="#currenttimemillis" title="Permanent link">&para;</a></h3>
+<h2 id="_2">안드로이드에서 시간<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<h3 id="currenttimemillis">currentTimeMillis<a class="headerlink" href="#currenttimemillis" title="Permanent link">#</a></h3>
 <p>UTC 1970-01-01 00:00:00을 기준으로 시작하는 시간 변수가 Long 값에 저장되기 때문에 대략 100년정도의 시간을 기록할 수 있다.</p>
 <p>milliseconds 단위</p>
 <div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">()</span>
 </code></pre></div>
-<h3 id="elapsedrealtime">elapsedRealtime<a class="headerlink" href="#elapsedrealtime" title="Permanent link">&para;</a></h3>
+<h3 id="elapsedrealtime">elapsedRealtime<a class="headerlink" href="#elapsedrealtime" title="Permanent link">#</a></h3>
 <p>안드로이드 시작 후 지금까지의 흘러간 시간</p>
 <p>milliseconds 단위</p>
 <div class="highlight"><pre><span></span><code><span class="n">SystemClock</span><span class="p">.</span><span class="na">elapsedRealtime</span><span class="p">()</span>
 </code></pre></div>
-<h3 id="localdatetime_1">LocalDateTime<a class="headerlink" href="#localdatetime_1" title="Permanent link">&para;</a></h3>
+<h3 id="localdatetime_1">LocalDateTime<a class="headerlink" href="#localdatetime_1" title="Permanent link">#</a></h3>
 <p>ISO-8601 calendar system 에서 사용하는 날짜 시간 표시방법이다.</p>
 <p><code>2007-12-03T10:15:30</code> 와 같이 표시하는 것이 대표적인 표시방법이고</p>
 <p>이표기법에는 타임존이 들어가 있지 않다.</p>
 <p>여기서 시간대를 추가, 타임존 추가 여부에 따라 사용되는 class가 OffsetDatatime, ZonedDataTime 등으로 달라지게 되며 System.currentTimeMillis()과의 상호 변환을 위한 class 및 시간간격, 시간주기 를 표시하기위한 class들이 추가로 있다.</p>
-<h2 id="android-sdk-26">Android SDK 26 이하에서 사용<a class="headerlink" href="#android-sdk-26" title="Permanent link">&para;</a></h2>
+<h2 id="android-sdk-26">Android SDK 26 이하에서 사용<a class="headerlink" href="#android-sdk-26" title="Permanent link">#</a></h2>
 <p>우선 시작하기 전에 안드로이드 26에서 추가된것이기 때문에 안드로이드 26미만에서 사용하는 방법에 대하여 알아 보자. 아직까지는 필요한 사항이다.</p>
-<h3 id="threethenabp">ThreeThenABP<a class="headerlink" href="#threethenabp" title="Permanent link">&para;</a></h3>
+<h3 id="threethenabp">ThreeThenABP<a class="headerlink" href="#threethenabp" title="Permanent link">#</a></h3>
 <p>이전에 사용한 JakeWharton님의 라이브러리가 있지만 여기서는 다른 방법을 소개한다.</p>
 <p><a href="https://github.com/JakeWharton/ThreeTenABP">GitHub - JakeWharton/ThreeTenABP: An adaptation of the JSR-310 backport for Android.</a></p>
-<h3 id="java-8-api">Java 8+ API 이용<a class="headerlink" href="#java-8-api" title="Permanent link">&para;</a></h3>
+<h3 id="java-8-api">Java 8+ API 이용<a class="headerlink" href="#java-8-api" title="Permanent link">#</a></h3>
 <p>안드로이드에서는 Java 8+ API desugaring support (Android Gradle Plugin 4.0.0+)를 이용한 java.time.* 에서 지원하는 코드를 사용할수 있다.</p>
 <p><a href="https://developer.android.com/studio/write/java8-support#library-desugaring">https://developer.android.com/studio/write/java8-support#library-desugaring</a></p>
 <p>아래코드를 삽입하면 사용할수 있다.</p>
@@ -604,7 +652,7 @@ Tag: android</p>
 <p>사용해본 결과는 모든 함수를 지원하지는 않는다.<br />
 <a href="https://developer.android.com/studio/write/java8-support-table">https://developer.android.com/studio/write/java8-support-table</a></p>
 </div>
-<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h2>
+<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">#</a></h2>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">gradle</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="n">android</span> <span class="o">{</span>
     <span class="n">compileOptions</span> <span class="o">{</span>

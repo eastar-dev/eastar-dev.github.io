@@ -35,7 +35,7 @@ markdown_extensions:
       custom_checkbox: true
   - meta
   - toc:
-      permalink: true
+      permalink: "#"
 
 theme:
   name: material
@@ -61,3 +61,6 @@ theme:
         name: Switch to light mode
   icon:
     repo: fontawesome/brands/github
+  # extra_css:
+  #   - extra.css
+    

@@ -444,6 +444,54 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Room Test
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Room Test" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Room Test
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Room%20Test/Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61/" class="md-nav__link">
+        Room Test 2 Migration Test
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -564,17 +612,17 @@
               
                 
                 
-                <h1 id="room-test-1-dao-test">Room Test 1 Dao Test<a class="headerlink" href="#room-test-1-dao-test" title="Permanent link">&para;</a></h1>
+                <h1 id="room-test-1-dao-test">Room Test 1 Dao Test<a class="headerlink" href="#room-test-1-dao-test" title="Permanent link">#</a></h1>
 <p>Create: 2021년 9월 30일 오후 4:25
 Tag: android, db, test</p>
-<h2 id="room">Room?<a class="headerlink" href="#room" title="Permanent link">&para;</a></h2>
+<h2 id="room">Room?<a class="headerlink" href="#room" title="Permanent link">#</a></h2>
 <p>Room 은 Jetpack libraries중에서 DB관련 라이브러리 이며, <br />
 주요 기능으로 DB사용의 장점과, 쉬운 Data 객체 변환이 특징인 라이브러리에요.  </p>
 <p>글을 작성하는 시점을 기준으로 Stable Release 2.3.0, Alpha 2.4.0-alpha05이 나와있어요.</p>
 <p>2.4.0-alphaXX 부터 <a href="https://developer.android.com/reference/androidx/room/AutoMigration"><code>AutoMigration</code></a> 을 지원해요.<br />
 자세한건 아래 링크를 참조</p>
 <p><a href="https://developer.android.com/jetpack/androidx/releases/room">AutoMigration 참조 링크</a></p>
-<h2 id="gradle">Gradle<a class="headerlink" href="#gradle" title="Permanent link">&para;</a></h2>
+<h2 id="gradle">Gradle<a class="headerlink" href="#gradle" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
     <span class="kt">def</span> <span class="n">room_version</span> <span class="o">=</span> <span class="s2">&quot;2.4.0-alpha05&quot;</span>
     <span class="n">implementation</span> <span class="s2">&quot;androidx.room:room-runtime:$room_version&quot;</span>
@@ -582,7 +630,7 @@ Tag: android, db, test</p>
     <span class="n">implementation</span> <span class="s2">&quot;androidx.room:room-ktx:$room_version&quot;</span>
 <span class="o">}</span>
 </code></pre></div>
-<h2 id="room-test">Room Test<a class="headerlink" href="#room-test" title="Permanent link">&para;</a></h2>
+<h2 id="room-test">Room Test<a class="headerlink" href="#room-test" title="Permanent link">#</a></h2>
 <p><a href="https://developer.android.com/training/data-storage/room/testing-db"></a></p>
 <p>Room을 test 하기위한 방법은 2가지가 있어요.</p>
 <p>첫번째는 android device를 사용하는 test 방법이고 InstrumentedTest 인데<br />
@@ -591,18 +639,18 @@ Tag: android, db, test</p>
 하지만 InstrumentedTest 방법은 device가 필요해요.</p>
 <p>이건 CI툴에 자동화를 돌리기 어렵운 단점이 있어요.</p>
 <p>이 글에선 android device없이 어디까지 room testing이 가능한가 해볼꺼에요.</p>
-<h3 id="dao-test">Dao Test<a class="headerlink" href="#dao-test" title="Permanent link">&para;</a></h3>
+<h3 id="dao-test">Dao Test<a class="headerlink" href="#dao-test" title="Permanent link">#</a></h3>
 <p>room에서 test case를 만들 만한것이 무엇이 있을까요?</p>
 <p>기본적인 database 생성  및 CRUD 등이 있겠네요.<br />
 Room은 CRUD의 대부분을 Dao class에서 할수 있어요.</p>
 <p>샘플에서 <a href="https://github.com/eastar-dev/RoomTest/blob/master/data/src/main/java/dev/eastar/roomtest/data/db/UserDao.kt">요기 부분</a>이에요.<br />
 여기를 test하는 코드를 만들면 Room test 에서 절반은 했다고 생각하시면 되요.</p>
-<h3 id="migration-test">Migration Test<a class="headerlink" href="#migration-test" title="Permanent link">&para;</a></h3>
+<h3 id="migration-test">Migration Test<a class="headerlink" href="#migration-test" title="Permanent link">#</a></h3>
 <p>room database에서는 버전이 있고 이 버전은 프로그램의 변경에 따라<br />
 이전 사용자들을 업그레이드 하면서 변경해요. 이걸 마이그레이션 이라 해요</p>
 <p>room Migration Test는 다른 test와 좀다르게 불편한 부분이 있고 주의해야 할점도 있어요.</p>
 <p>다음 글에서 좀더 상세하게 Migration Test를 다룰꺼에요.</p>
-<h2 id="android-instrumented-test">Android Instrumented Test<a class="headerlink" href="#android-instrumented-test" title="Permanent link">&para;</a></h2>
+<h2 id="android-instrumented-test">Android Instrumented Test<a class="headerlink" href="#android-instrumented-test" title="Permanent link">#</a></h2>
 <p>아래와 같은 코드를 test 할꺼에요</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@Dao</span>
 <span class="kd">interface</span> <span class="nc">UserDao</span> <span class="p">{</span>
@@ -673,9 +721,9 @@ test block을 coroutine <code>runBlocking</code>으로 감싸서 test 합니다.
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nn">com.google.common.truth.Truth.assertThat</span>
 </code></pre></div>
 </div>
-<h2 id="unit-test">Unit Test<a class="headerlink" href="#unit-test" title="Permanent link">&para;</a></h2>
+<h2 id="unit-test">Unit Test<a class="headerlink" href="#unit-test" title="Permanent link">#</a></h2>
 <p>Unit Test에서 test를 할려면 크게 다르지 않아요 다만. Robolectric을 사용해야 합니다.</p>
-<h3 id="robolectric">Robolectric<a class="headerlink" href="#robolectric" title="Permanent link">&para;</a></h3>
+<h3 id="robolectric">Robolectric<a class="headerlink" href="#robolectric" title="Permanent link">#</a></h3>
 <p>gradle</p>
 <div class="highlight"><pre><span></span><code><span class="c1">//robolectric</span>
 <span class="n">dependencies</span> <span class="p">{</span>
@@ -698,7 +746,7 @@ test block을 coroutine <code>runBlocking</code>으로 감싸서 test 합니다.
 <span class="p">}</span>
 </code></pre></div>
 <p>제가 알고 있는 가장 간단한 Robolectric사용법이에요</p>
-<h3 id="unit-test-code">unit test code<a class="headerlink" href="#unit-test-code" title="Permanent link">&para;</a></h3>
+<h3 id="unit-test-code">unit test code<a class="headerlink" href="#unit-test-code" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="nd">@Config</span><span class="p">(</span><span class="n">sdk</span> <span class="o">=</span> <span class="o">[</span><span class="m">30</span><span class="o">]</span><span class="p">)</span>
 <span class="nd">@RunWith</span><span class="p">(</span><span class="n">RobolectricTestRunner</span><span class="o">::</span><span class="n">class</span><span class="p">)</span>
 <span class="kd">class</span> <span class="nc">TestDatabaseUnitTest</span> <span class="p">{</span>
@@ -738,7 +786,7 @@ test block을 coroutine <code>runBlocking</code>으로 감싸서 test 합니다.
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h2>
+<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">#</a></h2>
 <p>Sample Code</p>
 <p><a href="https://github.com/eastar-dev/RoomTest">GitHub - eastar-dev/RoomTest: room migrations</a></p>
                 
