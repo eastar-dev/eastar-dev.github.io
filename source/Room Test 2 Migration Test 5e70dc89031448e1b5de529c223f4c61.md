@@ -3,8 +3,7 @@
 Create: 2021년 10월 5일 오후 5:08  
 Tag: android, db, test
 
-[Room Test 1 Dao Test][2]
-  [2]: Room Test 1 Dao Test 046fa740a1f74274bda4ed5f8d6d4cf9.md
+이글은 [Room Test 1 Dao Test](Room%20Test%201%20Dao%20Test%20046fa740a1f74274bda4ed5f8d6d4cf9.md) 과 연결되어 있습니다.
 
 ## Migration Test
 
@@ -19,7 +18,7 @@ room Migration Test는 다른 test와 좀다르게 불편한 부분이 있고 �
 
 ```groovy
 dependencies {
-		def room_version = "2.4.0-alpha05"
+	def room_version = "2.4.0-alpha05"
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
@@ -95,9 +94,10 @@ class MigrationTest {
 ```
 
 !!! warning 
+    migration test 는 기본적으로 DB의 구조만 test 해요.  
+    DB의 내용이 재대로 변경 됐는지는 직접  
+    assert를 사용해서 확인 해야해요
 
-    migration test 는 기본적으로 DB의 구조만 test 해요. DB의 내용이 재대로 변경 됐는지는 직접  
-    asset를 사용해서 확인 해야해요
 
 ### comumn change test
 
@@ -161,10 +161,16 @@ val MIGRATION_2_3 = object : Migration(2, 3) {
 migration은 table 구조만 검증해주기 때문에 내용은 직접 검증해야 해요.  
 그리고 생각보다 Table column type도 일일이 챙겨야 해요
 
-??? tip "create query 출처"
-    
-    val tempTable = """CREATE TABLE IF NOT EXISTS `USERS_3` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `level` TEXT NOT NULL, `date` TEXT NOT NULL, `location` TEXT, `photo` TEXT)"""
-    
+??? tip "CREATE TABLE QUERY는 어디에서 가져올까?"
+    ```
+    val tempTable = """CREATE TABLE IF NOT EXISTS 
+        `USERS_3` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 
+            `name` TEXT NOT NULL, 
+            `level` TEXT NOT NULL, 
+            `date` TEXT NOT NULL, 
+            `location` TEXT, 
+            `photo` TEXT)"""
+    ```
     ![Untitled](Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61/Untitled.png)
     
     아래쪽이 제가 사용하는 table entity인데 생각하는것과 생성된 table이 다를 수 있으니 복사해서 사용하기를 권장드려요.
@@ -259,14 +265,13 @@ class MigrationTest {
 ```
 
 !!! warning 
-
-migration test 는 기본적으로 DB의 구조만 test 해요. DB의 내용이 재대로 변경 됐는지는 직접  
-asset를 사용해서 확인 해야해요
+    migration test 는 기본적으로 DB의 구조만 test 해요.  
+    DB의 내용이 재대로 변경 됐는지는 직접  
+    assert를 사용해서 확인 해야해요
 
 ## Unit Test
 
-Unit Test에서 test를 할려면 크게 다르지 않아요 다만. Robolectric을 사용해야 합니다.
-
+Unit Test에서 test를 할려면 크게 다르지 않아요 다만. Robolectric을 사용해야 합니다.  
 덤으로 실행중 오류가 발생하는것도 포함이에요.
 
 ### Robolectric
@@ -301,7 +306,7 @@ class TestDatabaseUnitTest {
 
 ### unit test code
 
-- ??? note "android test 랑 동일합니다."
+!!! example "android test 랑 동일합니다."
     
     ```kotlin
     @Config(sdk = [30])
@@ -377,44 +382,43 @@ class TestDatabaseUnitTest {
     
 
 !!! fail "다만 아래와 같은 오류가 발생합니다."
+    ```
+    Cannot find the schema file in the assets folder. Make sure to include the exported json schemas in your test assert inputs. See https://developer.android.com/training/data-storage/room/migrating-db-versions#export-schema for details. Missing file: dev.eastar.roomtest.data.db.TestDatabase/1.json
+    java.io.FileNotFoundException: Cannot find the schema file in the assets folder. Make sure to include the exported json schemas in your test assert inputs. See https://developer.android.com/training/data-storage/room/migrating-db-versions#export-schema for details. Missing file: dev.eastar.roomtest.data.db.TestDatabase/1.json
+        at androidx.room.testing.MigrationTestHelper.loadSchema(MigrationTestHelper.java:484)
+        at androidx.room.testing.MigrationTestHelper.createDatabase(MigrationTestHelper.java:238)
+        at dev.eastar.roomtest.data.db.MigrationUnitTest.migrateAll(MigrationUnitTest.kt:33)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:61)
+        at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+        at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:575)
+        at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:278)
+        at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:89)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+        at java.base/java.lang.Thread.run(Thread.java:834)
+    ```
 
-```kotlin
-Cannot find the schema file in the assets folder. Make sure to include the exported json schemas in your test assert inputs. See https://developer.android.com/training/data-storage/room/migrating-db-versions#export-schema for details. Missing file: dev.eastar.roomtest.data.db.TestDatabase/1.json
-java.io.FileNotFoundException: Cannot find the schema file in the assets folder. Make sure to include the exported json schemas in your test assert inputs. See https://developer.android.com/training/data-storage/room/migrating-db-versions#export-schema for details. Missing file: dev.eastar.roomtest.data.db.TestDatabase/1.json
-	at androidx.room.testing.MigrationTestHelper.loadSchema(MigrationTestHelper.java:484)
-	at androidx.room.testing.MigrationTestHelper.createDatabase(MigrationTestHelper.java:238)
-	at dev.eastar.roomtest.data.db.MigrationUnitTest.migrateAll(MigrationUnitTest.kt:33)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:61)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:575)
-	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$0(SandboxTestRunner.java:278)
-	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:89)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-```
+    요약하면 exported json schemas가 안된것 같으니 다음 주소에 가서 자세한건 확인해봐라.  
+    못찾은 파일은 ~~ .json파일이다. 란 내용입니다.  
+    해당 주소에 가서보면 이미 설정한 gradle setting에 대한 이야기를 하고 있네요.
+    
+        Cannot find the schema file in the assets folder. 
+        Make sure to include the exported json schemas in your test assert inputs. 
+        See https://developer.android.com/training/data-storage/room/migrating-db-versions#export-schema for details. 
+        Missing file: dev.eastar.roomtest.data.db.TestDatabase/1.json
 
-요약하면 exported json schemas가 안된것 같으니 다음 주소에 가서 자세한건 확인해봐라.  
-못찾은 파일은 ~~ .json파일이다. 란 내용입니다.  
-해당 주소에 가서보면 이미 설정한 gradle setting에 대한 이야기를 하고 있네요.
 
-```kotlin
-Cannot find the schema file in the assets folder. 
-Make sure to include the exported json schemas in your test assert inputs. 
-See https://developer.android.com/training/data-storage/room/migrating-db-versions#export-schema for details. 
-Missing file: dev.eastar.roomtest.data.db.TestDatabase/1.json
-```
 
-- ??? warning "아래 내용을 꼭 넣어야 되요"
+??? warning "아래 내용을 꼭 넣어야 되요"
     
     ```java
     public class MigrationTestHelper extends TestWatcher {
@@ -1019,18 +1023,17 @@ Missing file: dev.eastar.roomtest.data.db.TestDatabase/1.json
         }
     }
     ```
-    
 
-[MigrationTestHelper.java](Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61/MigrationTestHelper.java)
+!!! 첨부파일    
 
-파일에 출처는 위치를 추적해서 디컴파일한 코드에요.
+    [MigrationTestHelper.java](Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61/MigrationTestHelper.java)
+
+파일에 출처는 아래 코드를 추적해서 디컴파일한 코드에요.  
 권장은 [https://cs.android.com/](https://cs.android.com/) 에서 코드를 찾으셔서 넣는게 좋습니다.
 
 ```kotlin
 import androidx.room.testing.MigrationTestHelper
 ```
-
- 
 
 이 파일을 그냥 넣으시면 안되고  
 unit test에서 getAssets()을 통해 1.json 파일을 읽을 수 없어서 나오는 오류이기 때문에

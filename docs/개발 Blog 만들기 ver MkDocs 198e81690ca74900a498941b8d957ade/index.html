@@ -20,7 +20,7 @@
     
     
       
-        <title>DevBlog = Notion + MkDocs - Eastar's android develop</title>
+        <title>Dev Blog with Notion - Eastar's android develop</title>
       
     
     
@@ -41,6 +41,8 @@
       
     
     
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
     
       
@@ -82,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#notion-mkdocs-blog" class="md-skip">
+        <a href="#dev-blog-with-notion" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DevBlog = Notion + MkDocs
+              Dev Blog with Notion
             
           </span>
         </div>
@@ -292,8 +294,23 @@
   
   
     <li class="md-nav__item">
+      <a href="../Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61/" class="md-nav__link">
+        Room Test 2 Migration Test
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Truth%EB%A5%BC%20%EC%86%8C%EA%B0%9C%20%ED%95%A9%EB%8B%88%EB%8B%A4%20dfdd28fc2eb748448521b94f89e30c27/" class="md-nav__link">
-        Hamcrest를 대체할 Google의 Truth를 소개 합니다.
+        Google Truth를 소개 합니다.
       </a>
     </li>
   
@@ -317,12 +334,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          DevBlog = Notion + MkDocs
+          Dev Blog with Notion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        DevBlog = Notion + MkDocs
+        Dev Blog with Notion
       </a>
       
         
@@ -502,54 +519,6 @@
       <a href="../%EB%B9%8C%EB%93%9C%EC%8B%9C%EA%B0%84%EC%9D%84%20%ED%99%94%EB%A9%B4%EC%97%90%20%ED%91%9C%EC%8B%9C%ED%95%98%EA%B8%B0%20ce459388fabf40bcbe7e900c162eb8d1/" class="md-nav__link">
         빌드시간을 화면에 표시하기
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7">
-          Room Test
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Room Test" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Room Test
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Room%20Test/Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61/" class="md-nav__link">
-        Room Test 2 Migration Test
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -736,7 +705,7 @@
               
                 
                 
-                <h1 id="notion-mkdocs-blog">Notion과 MkDocs을 이용한 개발 Blog 만들기<a class="headerlink" href="#notion-mkdocs-blog" title="Permanent link">#</a></h1>
+                <h1 id="dev-blog-with-notion">Dev Blog with Notion<a class="headerlink" href="#dev-blog-with-notion" title="Permanent link">#</a></h1>
 <p>Create: 2021년 9월 22일 오후 11:55</p>
 <h2 id="mkdocs">MkDocs<a class="headerlink" href="#mkdocs" title="Permanent link">#</a></h2>
 <p>이글은 블로그의 설치에 중점이 없고 Notion을 이용해서 글을 정리하는 분들에게<br />
@@ -819,7 +788,7 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
 <span class="p">}</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code> <span class="err">```</span><span class="n">kotlin</span>
- <span class="n">fun</span> <span class="nf">main</span><span class="o">()</span> <span class="o">{</span>
+ <span class="n">fun</span> <span class="n">main</span><span class="o">()</span> <span class="o">{</span>
      <span class="n">println</span><span class="o">(</span><span class="s2">&quot;hello world&quot;</span><span class="o">)</span>
  <span class="o">}</span>
  <span class="err">```</span>
@@ -831,7 +800,7 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
 </span><span class="p">}</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code> <span class="err">```</span><span class="n">kotlin</span> <span class="n">hl_lines</span><span class="o">=</span><span class="s2">&quot;2&quot;</span>
- <span class="n">fun</span> <span class="nf">main</span><span class="o">()</span> <span class="o">{</span>
+ <span class="n">fun</span> <span class="n">main</span><span class="o">()</span> <span class="o">{</span>
      <span class="n">println</span><span class="o">(</span><span class="s2">&quot;hello world&quot;</span><span class="o">)</span>
  <span class="o">}</span>
  <span class="err">```</span>
@@ -948,8 +917,6 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
   [2]: index.md
 </code></pre></div>
                 
-                  
-                
               
               
                 
@@ -972,7 +939,7 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../Truth%EB%A5%BC%20%EC%86%8C%EA%B0%9C%20%ED%95%A9%EB%8B%88%EB%8B%A4%20dfdd28fc2eb748448521b94f89e30c27/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hamcrest를 대체할 Google의 Truth를 소개 합니다." rel="prev">
+        <a href="../Truth%EB%A5%BC%20%EC%86%8C%EA%B0%9C%20%ED%95%A9%EB%8B%88%EB%8B%A4%20dfdd28fc2eb748448521b94f89e30c27/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Google Truth를 소개 합니다." rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -981,7 +948,7 @@ https://squidfunk.github.io/mkdocs-material/reference/abbreviations/</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Hamcrest를 대체할 Google의 Truth를 소개 합니다.
+              Google Truth를 소개 합니다.
             </div>
           </div>
         </a>

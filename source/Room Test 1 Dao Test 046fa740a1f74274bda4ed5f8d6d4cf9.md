@@ -1,7 +1,10 @@
 # Room Test 1 Dao Test
 
-Create: 2021년 9월 30일 오후 4:25
+Create: 2021년 9월 30일 오후 4:25  
 Tag: android, db, test
+
+이글은 [Room Test 2 Migration Test](Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61.md) 과 연결되어 있습니다.
+
 
 ## Room?
 
