@@ -3,7 +3,12 @@
 Create: 2021년 10월 5일 오후 5:08  
 Tag: android, db, test
 
-이글은 [Room Test 1 Dao Test](Room%20Test%201%20Dao%20Test%20046fa740a1f74274bda4ed5f8d6d4cf9.md) 과 연결되어 있습니다.
+이글은 다음과 같이 구성되어 있습니다.  
+1. [Room Test 1 Dao Test](Room%20Test%201%20Dao%20Test%20046fa740a1f74274bda4ed5f8d6d4cf9.md)  
+2. [Room Test 2 Migration Test](Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61.md)  
+3. [Room Test 3 AutoMigration](Room%20Test%203%20AutoMigration%20e87ce181d16c45ccb35db64b16b5be22.md)  
+
+
 
 ## Migration Test
 
@@ -457,6 +462,12 @@ import dev.eastar.room.testing.MigrationTestHelper
 👏 👏 👏 
 
 수고 하셨습니다.
+
+이글은 다음과 같이 구성되어 있습니다.  
+1. [Room Test 1 Dao Test](Room%20Test%201%20Dao%20Test%20046fa740a1f74274bda4ed5f8d6d4cf9.md)  
+2. [Room Test 2 Migration Test](Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61.md)  
+3. [Room Test 3 AutoMigration](Room%20Test%203%20AutoMigration%20e87ce181d16c45ccb35db64b16b5be22.md)  
+
 
 ## TL;DR
 
