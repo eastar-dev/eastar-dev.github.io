@@ -1,0 +1,951 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A blog created to help others with what I have organized while developing Android.">
+      
+      
+      
+        <meta name="author" content="Eastar Jeong">
+      
+      
+        <link rel="canonical" href="https://eastar-dev.github.io/Room%20Test%203%20AutoMigration%20e87ce181d16c45ccb35db64b16b5be22/">
+      
+      <link rel="icon" href="../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
+    
+    
+      
+        <title>Room Test 3 AutoMigration - Eastar's android develop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8b42a75e.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+
+  
+
+
+  
+
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-PM107R0BGH"),document.addEventListener("DOMContentLoaded",function(){"undefined"!=typeof location$&&location$.subscribe(function(t){gtag("config","G-PM107R0BGH",{page_path:t.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PM107R0BGH"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#room-test-3-automigration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Eastar&#39;s android develop" class="md-header__button md-logo" aria-label="Eastar's android develop" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Eastar's android develop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Room Test 3 AutoMigration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="grey"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/eastar-dev" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eastar-dev
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Eastar&#39;s android develop" class="md-nav__button md-logo" aria-label="Eastar's android develop" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    Eastar's android develop
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/eastar-dev" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eastar-dev
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Blog 사용설명서
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LocalDateTime%207795ab14786e4b0db7cb658cdae2eb26/" class="md-nav__link">
+        LocalDateTime
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Room%20Test%201%20Dao%20Test%20046fa740a1f74274bda4ed5f8d6d4cf9/" class="md-nav__link">
+        Room Test 1 Dao Test
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61/" class="md-nav__link">
+        Room Test 2 Migration Test
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Room Test 3 AutoMigration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Room Test 3 AutoMigration
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#automigration-test" class="md-nav__link">
+    AutoMigration Test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gradle" class="md-nav__link">
+    Gradle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-migration" class="md-nav__link">
+    Auto Migration
+  </a>
+  
+    <nav class="md-nav" aria-label="Auto Migration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatic-migration-specifications" class="md-nav__link">
+    Automatic migration specifications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-column-delete" class="md-nav__link">
+    Single column delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-2-column" class="md-nav__link">
+    Delete 2 column
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    총평
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    TL;DR
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Truth%EB%A5%BC%20%EC%86%8C%EA%B0%9C%20%ED%95%A9%EB%8B%88%EB%8B%A4%20dfdd28fc2eb748448521b94f89e30c27/" class="md-nav__link">
+        Google Truth를 소개 합니다.
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%EA%B0%9C%EB%B0%9C%20Blog%20%EB%A7%8C%EB%93%A4%EA%B8%B0%20ver%20MkDocs%20198e81690ca74900a498941b8d957ade/" class="md-nav__link">
+        Dev Blog with Notion
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%EB%B9%8C%EB%93%9C%EC%8B%9C%EA%B0%84%EC%9D%84%20%ED%99%94%EB%A9%B4%EC%97%90%20%ED%91%9C%EC%8B%9C%ED%95%98%EA%B8%B0%20ce459388fabf40bcbe7e900c162eb8d1/" class="md-nav__link">
+        빌드시간을 화면에 표시하기
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#automigration-test" class="md-nav__link">
+    AutoMigration Test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gradle" class="md-nav__link">
+    Gradle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-migration" class="md-nav__link">
+    Auto Migration
+  </a>
+  
+    <nav class="md-nav" aria-label="Auto Migration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatic-migration-specifications" class="md-nav__link">
+    Automatic migration specifications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-column-delete" class="md-nav__link">
+    Single column delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-2-column" class="md-nav__link">
+    Delete 2 column
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    총평
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    TL;DR
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="room-test-3-automigration">Room Test 3 AutoMigration<a class="headerlink" href="#room-test-3-automigration" title="Permanent link">#</a></h1>
+<p>Create: 2021년 10월 7일 오후 2:51<br />
+Tag: android, db, test</p>
+<h2 id="automigration-test">AutoMigration Test<a class="headerlink" href="#automigration-test" title="Permanent link">#</a></h2>
+<p>이전글에서 우리는 room test와 migration 및 migration test 방법에 대하여 알아 봤어요.  <br />
+이번에는 <code>2.4.0-alphaXX</code> 에서 나온 <a href="https://developer.android.com/training/data-storage/room/migrating-db-versions#automated">Automated migrations</a>에 대하여 알아 볼께요.</p>
+<p>room Migration에서 단점이라고 관려된 쿼리를 작성하고 별도의 Migration 객체 작업을 해줘야만 합니다.<br />
+이 작업을 이제는 1줄로 끝낼수도 있어요.(꼭 그렇다는건 아니라는 함정이 있어요.)</p>
+<h2 id="gradle">Gradle<a class="headerlink" href="#gradle" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">{</span>
+        <span class="kt">def</span> <span class="n">room_version</span> <span class="o">=</span> <span class="s2">&quot;2.4.0-alpha05&quot;</span>
+    <span class="n">implementation</span> <span class="s2">&quot;androidx.room:room-runtime:$room_version&quot;</span>
+    <span class="n">kapt</span> <span class="s2">&quot;androidx.room:room-compiler:$room_version&quot;</span>
+    <span class="n">implementation</span> <span class="s2">&quot;androidx.room:room-ktx:$room_version&quot;</span>
+    <span class="n">testImplementation</span> <span class="s2">&quot;androidx.room:room-testing:$room_version&quot;</span>
+        <span class="n">androidTestImplementation</span> <span class="s2">&quot;androidx.room:room-testing:$room_version&quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>migration test를 위한 설정</p>
+<div class="highlight"><pre><span></span><code><span class="n">android</span> <span class="p">{</span>
+    <span class="n">defaultConfig</span> <span class="p">{</span>
+        <span class="n">javaCompileOptions</span> <span class="p">{</span>
+            <span class="n">annotationProcessorOptions</span> <span class="p">{</span>
+                <span class="n">arguments</span> <span class="o">+=</span> <span class="o">[</span>
+                    <span class="s">&quot;room.schemaLocation&quot;</span><span class="p">:</span><span class="s">&quot;</span><span class="si">$</span><span class="n">projectDir</span><span class="s">/schemas&quot;</span><span class="p">.</span><span class="na">toString</span><span class="p">(),</span>
+                    <span class="s">&quot;room.incremental&quot;</span><span class="p">:</span><span class="s">&quot;true&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;room.expandProjection&quot;</span><span class="p">:</span><span class="s">&quot;true&quot;</span><span class="o">]</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="auto-migration">Auto Migration<a class="headerlink" href="#auto-migration" title="Permanent link">#</a></h2>
+<p><a href="https://github.com/eastar-dev/RoomTest/tree/room-automigration-1-2-column-add">https://github.com/eastar-dev/RoomTest/tree/room-automigration-1-2-column-add</a></p>
+<p>Migration 객체가 삭제되고 RoomDatabase정의시 @Database항목에 autoMigrations이 추가 됩니다.<br />
+자세한건 아래 코드를 보면서 따라 올께요.</p>
+<p>아래와 같은 코드를 test 할꺼에요.</p>
+<p>기존의 DB version 1 → 2변경되면서 location과 photo가 추가됐어요.</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">변경전</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nd">@Entity</span><span class="p">(</span><span class="n">tableName</span> <span class="o">=</span> <span class="s">&quot;USERS&quot;</span><span class="p">)</span>
+<span class="kd">data</span> <span class="kd">class</span> <span class="nc">UserEntity</span><span class="p">(</span>
+    <span class="nd">@PrimaryKey</span><span class="p">(</span><span class="n">autoGenerate</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span>
+    <span class="kd">val</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">Long</span> <span class="o">=</span> <span class="m">0</span><span class="p">,</span>
+    <span class="kd">val</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+    <span class="kd">val</span> <span class="nv">level</span><span class="p">:</span> <span class="n">Level</span><span class="p">,</span>
+    <span class="kd">val</span> <span class="nv">date</span><span class="p">:</span> <span class="n">LocalDateTime</span> <span class="o">=</span> <span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">withNano</span><span class="p">(</span><span class="m">0</span><span class="p">),</span>
+<span class="p">)</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">변경후</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nd">@Entity</span><span class="p">(</span><span class="n">tableName</span> <span class="o">=</span> <span class="s">&quot;USERS&quot;</span><span class="p">)</span>
+<span class="kd">data</span> <span class="kd">class</span> <span class="nc">UserEntity</span><span class="p">(</span>
+    <span class="nd">@PrimaryKey</span><span class="p">(</span><span class="n">autoGenerate</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span>
+    <span class="kd">val</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">Long</span> <span class="o">=</span> <span class="m">0</span><span class="p">,</span>
+    <span class="kd">val</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+    <span class="kd">val</span> <span class="nv">level</span><span class="p">:</span> <span class="n">Level</span><span class="p">,</span>
+    <span class="kd">val</span> <span class="nv">date</span><span class="p">:</span> <span class="n">LocalDateTime</span> <span class="o">=</span> <span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">withNano</span><span class="p">(</span><span class="m">0</span><span class="p">),</span>
+    <span class="kd">val</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">String?</span> <span class="o">=</span> <span class="s">&quot;geo:</span><span class="si">${</span><span class="n">Random</span><span class="p">.</span><span class="na">latitude</span><span class="si">}</span><span class="s">,</span><span class="si">${</span><span class="n">Random</span><span class="p">.</span><span class="na">longitude</span><span class="si">}</span><span class="s">&quot;</span><span class="p">,</span>
+    <span class="kd">val</span> <span class="nv">photo</span><span class="p">:</span> <span class="kt">String?</span> <span class="o">=</span> <span class="s">&quot;https://picsum.photos/id/</span><span class="si">${</span><span class="n">Random</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="m">100</span><span class="p">)</span><span class="si">}</span><span class="s">/100/100&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+<p>update code</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">AutoMigration을 이용할 경우</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nd">@Database</span><span class="p">(</span>
+    <span class="n">entities</span> <span class="o">=</span> <span class="o">[</span><span class="n">UserEntity</span><span class="o">::</span><span class="n">class</span><span class="o">]</span><span class="p">,</span>
+<span class="hll">    <span class="n">autoMigrations</span> <span class="o">=</span> <span class="o">[</span><span class="n">AutoMigration</span><span class="p">(</span><span class="n">from</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">to</span> <span class="o">=</span> <span class="m">2</span><span class="p">)</span><span class="o">]</span><span class="p">,</span>
+</span>    <span class="n">version</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span>
+    <span class="n">exportSchema</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="p">)</span>
+<span class="nd">@TypeConverters</span><span class="p">(</span><span class="n">DateConverter</span><span class="o">::</span><span class="n">class</span><span class="p">)</span>
+<span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">TestDatabase</span> <span class="p">:</span> <span class="n">RoomDatabase</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">abstract</span> <span class="kd">fun</span> <span class="nf">getUserDao</span><span class="p">():</span> <span class="n">UserDao</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Migration Class를 이용할 경우</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="kd">val</span> <span class="nv">MIGRATION_1_2</span> <span class="o">=</span> <span class="k">object</span> <span class="p">:</span> <span class="nc">Migration</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">override</span> <span class="kd">fun</span> <span class="nf">migrate</span><span class="p">(</span><span class="n">database</span><span class="p">:</span> <span class="n">SupportSQLiteDatabase</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">database</span><span class="p">.</span><span class="na">execSQL</span><span class="p">(</span><span class="s">&quot;ALTER TABLE USERS ADD COLUMN location TEXT&quot;</span><span class="p">)</span>
+        <span class="n">database</span><span class="p">.</span><span class="na">execSQL</span><span class="p">(</span><span class="s">&quot;ALTER TABLE USERS ADD COLUMN photo TEXT&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<p>test code</p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">AutoMigration을 이용할 경우</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">MigrationTest</span> <span class="p">{</span>
+    <span class="kd">companion</span> <span class="kd">object</span> <span class="err">{</span>
+        <span class="kd">const</span> <span class="kd">val</span> <span class="nv">TEST_DB</span> <span class="o">=</span> <span class="s">&quot;migration-test&quot;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@get</span><span class="p">:</span><span class="n">Rule</span>
+    <span class="kd">val</span> <span class="nv">helper</span><span class="p">:</span> <span class="n">MigrationTestHelper</span> <span class="o">=</span> <span class="n">MigrationTestHelper</span><span class="p">(</span>
+        <span class="n">InstrumentationRegistry</span><span class="p">.</span><span class="na">getInstrumentation</span><span class="p">(),</span>
+        <span class="n">TestDatabase</span><span class="o">::</span><span class="n">class</span><span class="p">.</span><span class="na">java</span><span class="p">,</span>
+    <span class="p">)</span>
+
+        <span class="nd">@Test</span>
+    <span class="kd">fun</span> <span class="nf">migration_1_2</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//given</span>
+        <span class="kd">val</span> <span class="nv">level</span> <span class="o">=</span> <span class="s">&quot;Level1&quot;</span>
+        <span class="n">helper</span><span class="p">.</span><span class="na">createDatabase</span><span class="p">(</span><span class="n">TEST_DB</span><span class="p">,</span> <span class="m">1</span><span class="p">).</span><span class="na">use</span> <span class="p">{</span>
+            <span class="nb">it</span><span class="p">.</span><span class="na">execSQL</span><span class="p">(</span><span class="s">&quot;INSERT INTO USERS ( name,level,date ) VALUES (&#39;eastar&#39;, &#39;</span><span class="si">$</span><span class="n">level</span><span class="s">&#39; ,0);&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="c1">//when</span>
+<span class="hll">        <span class="n">helper</span><span class="p">.</span><span class="na">runMigrationsAndValidate</span><span class="p">(</span><span class="n">TEST_DB</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kc">true</span><span class="p">).</span><span class="na">use</span> <span class="p">{</span>
+</span>            <span class="c1">//then</span>
+            <span class="kd">val</span> <span class="nv">cursor</span> <span class="o">=</span> <span class="nb">it</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="s">&quot;SELECT level, location FROM USERS&quot;</span><span class="p">)</span>
+            <span class="n">cursor</span><span class="p">.</span><span class="na">moveToFirst</span><span class="p">()</span>
+            <span class="kd">val</span> <span class="nv">actualLevel</span> <span class="o">=</span> <span class="n">cursor</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="m">0</span><span class="p">)</span><span class="c1">//level</span>
+            <span class="kd">val</span> <span class="nv">actualLocation</span> <span class="o">=</span> <span class="n">cursor</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="m">1</span><span class="p">)</span><span class="c1">//location</span>
+            <span class="n">cursor</span><span class="p">.</span><span class="na">close</span><span class="p">()</span>
+            <span class="n">assertThat</span><span class="p">(</span><span class="n">actualLevel</span><span class="p">).</span><span class="na">isEqualTo</span><span class="p">(</span><span class="n">level</span><span class="p">)</span>
+            <span class="n">assertThat</span><span class="p">(</span><span class="n">actualLocation</span><span class="p">).</span><span class="na">isNull</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Migration Class를 이용할 경우</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">MigrationTest</span> <span class="p">{</span>
+    <span class="kd">companion</span> <span class="kd">object</span> <span class="err">{</span>
+        <span class="kd">const</span> <span class="kd">val</span> <span class="nv">TEST_DB</span> <span class="o">=</span> <span class="s">&quot;migration-test&quot;</span>
+    <span class="p">}</span>
+
+    <span class="nd">@get</span><span class="p">:</span><span class="n">Rule</span>
+    <span class="kd">val</span> <span class="nv">helper</span><span class="p">:</span> <span class="n">MigrationTestHelper</span> <span class="o">=</span> <span class="n">MigrationTestHelper</span><span class="p">(</span>
+        <span class="n">InstrumentationRegistry</span><span class="p">.</span><span class="na">getInstrumentation</span><span class="p">(),</span>
+        <span class="n">TestDatabase</span><span class="o">::</span><span class="n">class</span><span class="p">.</span><span class="na">java</span><span class="p">,</span>
+    <span class="p">)</span>
+
+        <span class="nd">@Test</span>
+    <span class="kd">fun</span> <span class="nf">migration_1_2</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//given</span>
+        <span class="kd">val</span> <span class="nv">level</span> <span class="o">=</span> <span class="s">&quot;Level1&quot;</span>
+        <span class="n">helper</span><span class="p">.</span><span class="na">createDatabase</span><span class="p">(</span><span class="n">TEST_DB</span><span class="p">,</span> <span class="m">1</span><span class="p">).</span><span class="na">use</span> <span class="p">{</span>
+            <span class="nb">it</span><span class="p">.</span><span class="na">execSQL</span><span class="p">(</span><span class="s">&quot;INSERT INTO USERS ( name,level,date ) VALUES (&#39;eastar&#39;, &#39;</span><span class="si">$</span><span class="n">level</span><span class="s">&#39; ,0);&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="c1">//when</span>
+        <span class="n">helper</span><span class="p">.</span><span class="na">runMigrationsAndValidate</span><span class="p">(</span><span class="n">TEST_DB</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="n">MIGRATION_1_2</span><span class="p">).</span><span class="na">use</span> <span class="p">{</span>
+            <span class="c1">//then</span>
+            <span class="kd">val</span> <span class="nv">cursor</span> <span class="o">=</span> <span class="nb">it</span><span class="p">.</span><span class="na">query</span><span class="p">(</span><span class="s">&quot;SELECT level, location FROM USERS&quot;</span><span class="p">)</span>
+            <span class="n">cursor</span><span class="p">.</span><span class="na">moveToFirst</span><span class="p">()</span>
+            <span class="kd">val</span> <span class="nv">actualLevel</span> <span class="o">=</span> <span class="n">cursor</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="m">0</span><span class="p">)</span><span class="c1">//level</span>
+            <span class="kd">val</span> <span class="nv">actualLocation</span> <span class="o">=</span> <span class="n">cursor</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="m">1</span><span class="p">)</span><span class="c1">//location</span>
+            <span class="n">cursor</span><span class="p">.</span><span class="na">close</span><span class="p">()</span>
+            <span class="n">assertThat</span><span class="p">(</span><span class="n">actualLevel</span><span class="p">).</span><span class="na">isEqualTo</span><span class="p">(</span><span class="n">level</span><span class="p">)</span>
+            <span class="n">assertThat</span><span class="p">(</span><span class="n">actualLocation</span><span class="p">).</span><span class="na">isNull</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>migration test 는 기본적으로 DB의 구조만 test 해요. DB의 내용이 재대로 변경 됐는지는 직접<br />
+asset를 사용해서 확인 해야해요</p>
+</div>
+<details class="tip"><summary>내부가 궁금해요</summary><p>runMigrationsAndValidate 내부를 확인해보면<br />
+container.addMigrations(getAutoMigrations(mSpecs)); 함수를 통해서 자동으로<br />
+List<Migration>을 넣어 주고 있네요</p>
+<p>외부에서 사용 할수는 없네요<br />
+private List<Migration> getAutoMigrations(List<AutoMigrationSpec> userProvidedSpecs)<br />
+정의되어 있어요</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@SuppressLint</span><span class="p">(</span><span class="s">&quot;RestrictedApi&quot;</span><span class="p">)</span>
+<span class="n">public</span> <span class="n">SupportSQLiteDatabase</span> <span class="n">runMigrationsAndValidate</span><span class="p">(</span><span class="kt">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">int</span> <span class="n">version</span><span class="p">,</span>
+        <span class="n">boolean</span> <span class="n">validateDroppedTables</span><span class="p">,</span> <span class="n">Migration</span><span class="p">...</span> <span class="n">migrations</span><span class="p">)</span> <span class="n">throws</span> <span class="n">IOException</span> <span class="p">{</span>
+    <span class="n">File</span> <span class="n">dbPath</span> <span class="o">=</span> <span class="n">mInstrumentation</span><span class="p">.</span><span class="na">getTargetContext</span><span class="p">().</span><span class="na">getDatabasePath</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">dbPath</span><span class="p">.</span><span class="na">exists</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="n">new</span> <span class="n">IllegalStateException</span><span class="p">(</span><span class="s">&quot;Cannot find the database file for &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot;. &quot;</span>
+                <span class="o">+</span> <span class="s">&quot;Before calling runMigrations, you must first create the database via &quot;</span>
+                <span class="o">+</span> <span class="s">&quot;createDatabase.&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">SchemaBundle</span> <span class="n">schemaBundle</span> <span class="o">=</span> <span class="n">loadSchema</span><span class="p">(</span><span class="n">version</span><span class="p">);</span>
+    <span class="n">RoomDatabase</span><span class="p">.</span><span class="na">MigrationContainer</span> <span class="n">container</span> <span class="o">=</span> <span class="n">new</span> <span class="n">RoomDatabase</span><span class="p">.</span><span class="na">MigrationContainer</span><span class="p">();</span>
+    <span class="n">container</span><span class="p">.</span><span class="na">addMigrations</span><span class="p">(</span><span class="n">getAutoMigrations</span><span class="p">(</span><span class="n">mSpecs</span><span class="p">));</span>
+    <span class="n">container</span><span class="p">.</span><span class="na">addMigrations</span><span class="p">(</span><span class="n">migrations</span><span class="p">);</span>
+</code></pre></div>
+</details>
+<h3 id="automatic-migration-specifications">Automatic migration specifications<a class="headerlink" href="#automatic-migration-specifications" title="Permanent link">#</a></h3>
+<p><a href="https://developer.android.com/training/data-storage/room/migrating-db-versions#automigrationspec">AutoMigrationSpec</a> 에 대하여 알아 볼께요.</p>
+<p>migration 작업시 모호한 스키마가 있을때 사용하는 방법이에요.<br />
+좀더 상세한 migration을 정의한 클레스라고 생각하면 됩니다.<br />
+여기서 모호한 작업이라는것은</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@DeleteTable</span>
+<span class="nd">@RenameTable</span>
+<span class="nd">@DeleteColumn</span>
+<span class="nd">@RenameColumn</span>
+</code></pre></div>
+<p>를 이야기 합니다.</p>
+<p>삭제 TEST 시에는 아래 코드만 가지고는 오류가 발생한다</p>
+<div class="highlight"><pre><span></span><code><span class="n">AutoMigration</span><span class="p">(</span><span class="n">from</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">to</span> <span class="o">=</span> <span class="m">2</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition error">
+<p class="admonition-title">친절한 가이드가 나온다</p>
+<div class="highlight"><pre><span></span><code><span class="n">AutoMigration</span> <span class="n">Failure</span> <span class="k">in</span> <span class="err">‘</span><span class="n">AutoMigrationSpec_1_2</span><span class="err">’</span><span class="p">:</span> <span class="n">Column</span> <span class="err">‘</span><span class="n">date</span><span class="err">’</span> <span class="k">in</span> <span class="n">table</span> <span class="err">‘</span><span class="n">USERS</span><span class="err">’</span> <span class="n">has</span>
+<span class="n">been</span> <span class="n">either</span> <span class="n">removed</span> <span class="n">or</span> <span class="n">renamed</span><span class="p">.</span> <span class="n">Please</span> <span class="n">annotate</span> <span class="err">‘</span><span class="n">AutoMigrationSpec_1_2</span><span class="err">’</span> <span class="n">with</span> <span class="n">the</span> <span class="nd">@RenameColumn</span>
+<span class="n">or</span> <span class="nd">@RemoveColumn</span> <span class="n">annotation</span> <span class="n">to</span> <span class="n">specify</span> <span class="n">the</span> <span class="n">change</span> <span class="n">to</span> <span class="n">be</span> <span class="n">performed</span><span class="p">:</span>
+<span class="m">1</span><span class="p">)</span> <span class="n">RENAME</span><span class="p">:</span>
+    <span class="nd">@RenameColumn</span><span class="p">(</span>
+            <span class="n">tableName</span> <span class="o">=</span> <span class="s">&quot;USERS&quot;</span><span class="p">,</span>
+            <span class="n">fromColumnName</span> <span class="o">=</span> <span class="s">&quot;date&quot;</span><span class="p">,</span>
+            <span class="n">toColumnName</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">NEW_COLUMN_NAME</span><span class="o">&gt;</span>
+    <span class="p">)</span>
+<span class="m">2</span><span class="p">)</span> <span class="n">DELETE</span><span class="p">:</span>
+    <span class="nd">@DeleteColumn</span><span class="o">=</span><span class="p">(</span>
+            <span class="n">tableName</span> <span class="o">=</span> <span class="s">&quot;USERS&quot;</span><span class="p">,</span>
+            <span class="n">columnName</span> <span class="o">=</span> <span class="s">&quot;date&quot;</span>
+    <span class="p">)</span>
+</code></pre></div>
+</div>
+<h3 id="single-column-delete">Single column delete<a class="headerlink" href="#single-column-delete" title="Permanent link">#</a></h3>
+<p><a href="https://github.com/eastar-dev/RoomTest/tree/room-automigration-1-2-single-column">https://github.com/eastar-dev/RoomTest/tree/room-automigration-1-2-single-column</a></p>
+<p>아래와 같이 어느 값이 삭제될지에 대한<br />
+@DeleteColumn(tableName = "USERS", columnName = "date")<br />
+값이 필요하다.</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@Database</span><span class="p">(</span>
+    <span class="n">entities</span> <span class="o">=</span> <span class="o">[</span><span class="n">UserEntity</span><span class="o">::</span><span class="n">class</span><span class="o">]</span><span class="p">,</span>
+    <span class="n">autoMigrations</span> <span class="o">=</span> <span class="o">[</span><span class="n">AutoMigration</span><span class="p">(</span><span class="n">from</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">to</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">spec</span> <span class="o">=</span> <span class="n">TestDatabase</span><span class="p">.</span><span class="na">AutoMigrationSpec_1_2</span><span class="o">::</span><span class="n">class</span><span class="p">)</span><span class="o">]</span><span class="p">,</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span>
+    <span class="n">exportSchema</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="p">)</span>
+<span class="nd">@TypeConverters</span><span class="p">(</span><span class="n">DateConverter</span><span class="o">::</span><span class="n">class</span><span class="p">)</span>
+<span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">TestDatabase</span> <span class="p">:</span> <span class="n">RoomDatabase</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">abstract</span> <span class="kd">fun</span> <span class="nf">getUserDao</span><span class="p">():</span> <span class="n">UserDao</span>
+
+    <span class="nd">@DeleteColumn</span><span class="p">(</span><span class="n">tableName</span> <span class="o">=</span> <span class="s">&quot;USERS&quot;</span><span class="p">,</span> <span class="n">columnName</span> <span class="o">=</span> <span class="s">&quot;date&quot;</span><span class="p">)</span>
+    <span class="kd">internal</span> <span class="kd">class</span> <span class="nc">AutoMigrationSpec_1_2</span> <span class="p">:</span> <span class="n">AutoMigrationSpec</span> <span class="p">{</span>
+        <span class="kd">override</span> <span class="kd">fun</span> <span class="nf">onPostMigrate</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">SupportSQLiteDatabase</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">Log</span><span class="p">.</span><span class="na">e</span><span class="p">(</span><span class="s">&quot;Invoked once auto migration is done&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="delete-2-column">Delete 2 column<a class="headerlink" href="#delete-2-column" title="Permanent link">#</a></h3>
+<p><a href="https://github.com/eastar-dev/RoomTest/tree/room-automigration-1-2-double-column-delete">https://github.com/eastar-dev/RoomTest/tree/room-automigration-1-2-double-column-delete</a></p>
+<p>2개 이상의 column을 지우고 싶으면 아래와 같이 수정하면된다.</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@Database</span><span class="p">(</span>
+    <span class="n">entities</span> <span class="o">=</span> <span class="o">[</span><span class="n">UserEntity</span><span class="o">::</span><span class="n">class</span><span class="o">]</span><span class="p">,</span>
+    <span class="n">autoMigrations</span> <span class="o">=</span> <span class="o">[</span><span class="n">AutoMigration</span><span class="p">(</span><span class="n">from</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">to</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">spec</span> <span class="o">=</span> <span class="n">TestDatabase</span><span class="p">.</span><span class="na">AutoMigrationSpec_1_2</span><span class="o">::</span><span class="n">class</span><span class="p">)</span><span class="o">]</span><span class="p">,</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span>
+    <span class="n">exportSchema</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="p">)</span>
+<span class="nd">@TypeConverters</span><span class="p">(</span><span class="n">DateConverter</span><span class="o">::</span><span class="n">class</span><span class="p">)</span>
+<span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">TestDatabase</span> <span class="p">:</span> <span class="n">RoomDatabase</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">abstract</span> <span class="kd">fun</span> <span class="nf">getUserDao</span><span class="p">():</span> <span class="n">UserDao</span>
+
+    <span class="nd">@DeleteColumn.Entries</span><span class="p">(</span>
+        <span class="n">DeleteColumn</span><span class="p">(</span><span class="n">tableName</span> <span class="o">=</span> <span class="s">&quot;USERS&quot;</span><span class="p">,</span> <span class="n">columnName</span> <span class="o">=</span> <span class="s">&quot;date&quot;</span><span class="p">),</span>
+        <span class="n">DeleteColumn</span><span class="p">(</span><span class="n">tableName</span> <span class="o">=</span> <span class="s">&quot;USERS&quot;</span><span class="p">,</span> <span class="n">columnName</span> <span class="o">=</span> <span class="s">&quot;level&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="kd">internal</span> <span class="kd">class</span> <span class="nc">AutoMigrationSpec_1_2</span> <span class="p">:</span> <span class="n">AutoMigrationSpec</span> <span class="p">{</span>
+        <span class="kd">override</span> <span class="kd">fun</span> <span class="nf">onPostMigrate</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">SupportSQLiteDatabase</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">Log</span><span class="p">.</span><span class="na">e</span><span class="p">(</span><span class="s">&quot;Invoked once auto migration is done&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="_1">총평<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>이상으로 Auto Migration 에 대하여 알아 봤다.</p>
+<div class="highlight"><pre><span></span><code>@DeleteTable  
+@RenameTable  
+@DeleteColumn  
+@RenameColumn
+</code></pre></div>
+<p>등이 지원되는 수정에서는 비교적 간단한 방법으로 작업을 할수 있었지만<br />
+여전히 복잡한 작업은 수동 migration 작업이 필요해요.<br />
+좀더 발전해서 column type변경같은 것도 지원해 준다면,<br />
+좋을 것 같네요.</p>
+<p>👏 👏 👏 </p>
+<p>수고 하셨습니다.</p>
+<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">#</a></h2>
+<p>Sample Code</p>
+<p><a href="https://github.com/eastar-dev/RoomTest">GitHub - eastar-dev/RoomTest: room migrations</a></p>
+                
+              
+              
+                
+
+
+  <h2 id="__comments">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>var disqus_config=function(){this.page.url="https://eastar-dev.github.io/Room%20Test%203%20AutoMigration%20e87ce181d16c45ccb35db64b16b5be22/",this.page.identifier="Room%20Test%203%20AutoMigration%20e87ce181d16c45ccb35db64b16b5be22/"};window.addEventListener("load",function(){var e=document,i=e.createElement("script");i.src="//eastar-dev.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)})</script>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Room%20Test%202%20Migration%20Test%205e70dc89031448e1b5de529c223f4c61/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Room Test 2 Migration Test" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Room Test 2 Migration Test
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Truth%EB%A5%BC%20%EC%86%8C%EA%B0%9C%20%ED%95%A9%EB%8B%88%EB%8B%A4%20dfdd28fc2eb748448521b94f89e30c27/" class="md-footer__link md-footer__link--next" aria-label="Next: Google Truth를 소개 합니다." rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Google Truth를 소개 합니다.
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/eastar-dev" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.linkedin.com/in/eastarj/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.facebook.com/eastar.jeong" target="_blank" rel="noopener" title="www.facebook.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+    
+  </body>
+</html>
