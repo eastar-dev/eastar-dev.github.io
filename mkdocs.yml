@@ -12,7 +12,7 @@ extra:
   analytics:
     provider: google
     property: G-PM107R0BGH
-  disqus: eastar-dev
+  # disqus: eastar-dev
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/eastar-dev
