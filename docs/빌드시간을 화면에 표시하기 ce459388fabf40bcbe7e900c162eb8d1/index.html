@@ -533,12 +533,12 @@ Tag: android, tip</p>
 <div class="highlight"><pre><span></span><code><span class="n">buildTypes</span> <span class="o">{</span>
     <span class="n">debug</span> <span class="o">{</span>
         <span class="n">minifyEnabled</span> <span class="kc">true</span>
-        <span class="n">proguardFiles</span> <span class="n">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android-optimize.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-debug.pro&#39;</span>
+        <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android-optimize.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-debug.pro&#39;</span>
         <span class="n">buildConfigField</span> <span class="s2">&quot;String&quot;</span><span class="o">,</span> <span class="s2">&quot;SOME_KEY&quot;</span><span class="o">,</span> <span class="s1">&#39;&quot;debug용 키 스트링&quot;&#39;</span>
     <span class="o">}</span>
     <span class="n">release</span> <span class="o">{</span>
         <span class="n">minifyEnabled</span> <span class="kc">false</span>
-        <span class="n">proguardFiles</span> <span class="n">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android-optimize.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-rules.pro&#39;</span>
+        <span class="n">proguardFiles</span> <span class="nf">getDefaultProguardFile</span><span class="o">(</span><span class="s1">&#39;proguard-android-optimize.txt&#39;</span><span class="o">),</span> <span class="s1">&#39;proguard-rules.pro&#39;</span>
         <span class="n">buildConfigField</span> <span class="s2">&quot;String&quot;</span><span class="o">,</span> <span class="s2">&quot;SOME_KEY&quot;</span><span class="o">,</span> <span class="s1">&#39;&quot;release용 키 스트링&quot;&#39;</span>
     <span class="o">}</span>
 <span class="o">}</span>
@@ -580,10 +580,17 @@ Tag: android, tip</p>
                 
               
               
-                
 
 
-              
+<script src="https://utteranc.es/client.js"
+        repo="eastar-dev/eastar-dev.github.io"
+        issue-term="pathname"
+        theme='github-light'
+        crossorigin="anonymous"
+        async>
+</script>
+
+
             </article>
           </div>
         </div>

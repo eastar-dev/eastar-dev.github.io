@@ -39,6 +39,7 @@ markdown_extensions:
 
 theme:
   name: material
+  custom_dir: source
   font:
     text: Nanum Gothic
     code: Roboto Mono

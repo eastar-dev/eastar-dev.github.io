@@ -1,0 +1,21 @@
+
+{% if palette and palette.accent %}
+{% else %}
+{% endif %}
+
+<script>
+    var colorScheme = document.body.getAttribute("data-md-color-scheme")
+    utteranc_theme = 'github-light'
+    if ( colorScheme == 'slate' ) {
+        utteranc_theme = 'github-dark'
+    }
+    console.log(utteranc_theme)
+</script>
+
+<script src="https://utteranc.es/client.js"
+        repo="eastar-dev/eastar-dev.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
