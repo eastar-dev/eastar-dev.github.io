@@ -23,12 +23,12 @@ Tag: git, review
 ![https://media.giphy.com/media/WeM3bi1akoVQ4/giphy.gif](https://media.giphy.com/media/WeM3bi1akoVQ4/giphy.gif)
 
 
-![한번에 200~400 LoC를 리뷰해야 효과가 좋다](What%20is%20Bast%20Code%20Review%20591e067ba3e1467ab47fbb2dc5874416/_2020-07-29__9.27.49.png)
+![한번에 200~400 LoC를 리뷰해야 효과가 좋다](_2020-07-29__9.27.49.png)
 한번에 200~400 LoC를 리뷰해야 효과가 좋다
 
 [https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/](https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/)
 
-![시간당 500 LoC 이하로 리뷰를 진행해라.(즉,천천히 해라)](What%20is%20Bast%20Code%20Review%20591e067ba3e1467ab47fbb2dc5874416/_2020-07-29__9.29.15.png)
+![시간당 500 LoC 이하로 리뷰를 진행해라.(즉,천천히 해라)](_2020-07-29__9.29.15.png)
 
 시간당 500 LoC 이하로 리뷰를 진행해라.(즉,천천히 해라)
 
@@ -56,9 +56,9 @@ PR에 내용은 마법서가 아니다. 또한 리뷰어가 모든것을 알고 
 - 코드를 평가하는 자리도 아니다. 연차가 많다고 내 의견을 관철 시키려 하지말자.
 - 코드리뷰는 코드를 검사 받는 자리가 아니다. 수평적 입장에서 접근하고 적극적인 리뷰가 필요하다.
 
-![What%20is%20Bast%20Code%20Review%20591e067ba3e1467ab47fbb2dc5874416/Untitled.png](What%20is%20Bast%20Code%20Review%20591e067ba3e1467ab47fbb2dc5874416/Untitled.png)
+![What%20is%20Bast%20Code%20Review%20591e067ba3e1467ab47fbb2dc5874416/Untitled.png](Untitled.png)
 
-![What%20is%20Bast%20Code%20Review%20591e067ba3e1467ab47fbb2dc5874416/Untitled%201.png](What%20is%20Bast%20Code%20Review%20591e067ba3e1467ab47fbb2dc5874416/Untitled%201.png)
+![What%20is%20Bast%20Code%20Review%20591e067ba3e1467ab47fbb2dc5874416/Untitled%201.png](Untitled%201.png)
 
 - Apply는 '책임짐' 이란 뜻으로 사용하는것이 아니다.
 - 신뢰와 존중을 기본으로 장착 하자.
