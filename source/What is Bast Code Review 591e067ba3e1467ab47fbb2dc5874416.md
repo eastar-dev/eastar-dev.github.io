@@ -23,12 +23,13 @@ Tag: git, review
 ![https://media.giphy.com/media/WeM3bi1akoVQ4/giphy.gif](https://media.giphy.com/media/WeM3bi1akoVQ4/giphy.gif)
 
 
-![한번에 200~400 LoC를 리뷰해야 효과가 좋다](_2020-07-29__9.27.49.png)
+![한번에 200~400 LoC를 리뷰해야 효과가 좋다](1.png)
+
 한번에 200~400 LoC를 리뷰해야 효과가 좋다
 
 [https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/](https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/)
 
-![시간당 500 LoC 이하로 리뷰를 진행해라.(즉,천천히 해라)](_2020-07-29__9.29.15.png)
+![시간당 500 LoC 이하로 리뷰를 진행해라.(즉,천천히 해라)](2.png)
 
 시간당 500 LoC 이하로 리뷰를 진행해라.(즉,천천히 해라)
 
